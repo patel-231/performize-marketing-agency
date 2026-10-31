@@ -1,0 +1,6 @@
+{
+  "name": "Performize Marketing Agency",
+  "description": "Creative Digital Marketing Agency combining creativity, technology and digital strategy to make your brand impossible to ignore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
