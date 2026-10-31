@@ -149,83 +149,83 @@ export const AGENCY_SERVICES: ServiceItem[] = [
 
 export const AGENCY_PROJECTS: Project[] = [
   {
-    id: 'cypher-finance',
-    title: 'Cypher Digital Financial',
-    category: 'Brand & Performance Marketing',
-    clientIndustry: 'Fintech / Next-Gen Asset Management',
+    id: 'karpasaonline',
+    title: 'Karpasa Online — DTC eCommerce Scaling',
+    category: 'Ecommerce',
+    clientIndustry: 'Sustainable Apparel & Home Textiles',
     year: '2026',
-    shortDescription: 'End-to-end brand repositioning and multi-channel acquisition funnel delivering unprecedented inbound capital volume.',
-    fullDescription: 'Cypher required a total creative overhaul and an aggressive user acquisition engine to compete with incumbent wealth platforms. Performize rebuilt their brand positioning, designed a dark obsidian interactive web experience, and orchestrated a synchronized Meta & Google Ads strategy that outperformed previous customer acquisition benchmarks.',
-    image: '/src/assets/images/project_meta_brand_1793425951395.jpg',
-    aspectRatio: '16:9',
-    services: ['Meta Ads Management', 'Website Development', 'Branding & Graphic Design', 'Lead Generation & CRM'],
-    results: [
-      { label: 'Customer Acquisition Cost', value: '-42%', context: 'Reduced across Meta & Google campaigns' },
-      { label: 'Qualified Investor Inbound', value: '+310%', context: 'Within first 90 days of campaign deployment' },
-      { label: 'Average ROAS', value: '4.4x', context: 'Sustained blended return on ad spend' }
-    ],
-    challenge: 'Overcoming trust barriers in a crowded fintech sector with outdated, low-trust legacy branding and fragmented media buying.',
-    solution: 'Designed an authoritative dark-mode identity with glowing crimson cues, paired with high-velocity video storytelling and algorithmic bidding.',
-    featured: true
-  },
-  {
-    id: 'aura-chronometry',
-    title: 'Aura Luxury Chronometry',
-    category: 'eCommerce Growth & Creative',
-    clientIndustry: 'Luxury Hardware & Wearable Tech',
-    year: '2026',
-    shortDescription: 'High-contrast studio creative production, website redesign, and Meta Advantage+ scaling for an international luxury brand.',
-    fullDescription: 'Aura merged precision mechanical watch craftsmanship with biometric wireless audio. We engineered a cinematic DTC ecommerce experience with sub-second page transitions, accompanied by punchy short-form product reels and retargeting workflows that drove immediate global sales velocity.',
+    shortDescription: 'High-intent creative testing and catalog retargeting generating 2,896 website adds-to-cart at ₹0.96 per cart.',
+    fullDescription: 'Karpasa Online needed to lower customer acquisition costs and drive purchase intent. Performize deployed high-performing dynamic creatives and audience retargeting that delivered 2,896 website adds-to-cart at ₹0.96 per action, 1,132 landing page views at ₹1.34, reaching 113,407 target buyers on a lean ₹2,767 budget.',
     image: '/src/assets/images/project_ecommerce_growth_1793425951055.jpg',
     aspectRatio: '4:3',
-    services: ['Website Development', 'Video Editing', 'Meta Ads Management', 'Content Strategy'],
+    services: ['Meta Ads Management', 'Website Development', 'Content Strategy'],
     results: [
-      { label: 'eCommerce Conversion Rate', value: '4.8%', context: 'Up from 1.9% prior to platform redesign' },
-      { label: 'Launch Drop Sales', value: '$1.8M', context: 'Generated in the first 72 hours of product debut' },
-      { label: 'Video Hook Retention', value: '74%', context: 'On 15-second cinematic TikTok & Reel ads' }
+      { label: 'Website Adds To Cart', value: '2,896', context: 'Achieved at ₹0.96 per add to cart' },
+      { label: 'Landing Page Views', value: '1,132', context: 'At ₹1.34 per verified visitor' },
+      { label: 'Audience Reach', value: '113,407', context: 'Delivered on just ₹2,767 ad spend' }
     ],
-    challenge: 'Communicating the dual value proposition of luxury mechanical craftsmanship and high-tech biometric connectivity without confusing the buyer.',
-    solution: 'Cinematic lighting, high-contrast studio editorial assets, and split-second conversion flows on mobile devices.',
+    challenge: 'High drop-off rates and escalating cart acquisition costs from generic broad-audience ad sets.',
+    solution: 'Designed high-contrast product creative variations and segmented retargeting calibrated for instant mobile checkout.',
     featured: true
   },
   {
-    id: 'nexus-workflows',
-    title: 'Nexus Intelligent Automation',
-    category: 'AI Automation & CRM Architecture',
-    clientIndustry: 'Enterprise B2B Logistics & SaaS',
+    id: 'vaani-cher',
+    title: 'Vaani & Cher — Viral Paid Media Engine',
+    category: 'D2C',
+    clientIndustry: 'FMCG & Consumer Lifestyle',
     year: '2026',
-    shortDescription: 'Custom 24/7 intelligent conversational agents, automated qualification pipelines, and CRM integration for global freight brokers.',
-    fullDescription: 'Nexus struggled with manual lead triage, resulting in 8-hour response times and lost contracts. Performize engineered an autonomous AI qualification engine integrated directly into WhatsApp and web chat, dispatching quotes in under 45 seconds.',
+    shortDescription: 'Multi-campaign creative distribution delivering 4.99M impressions and 36,462 link clicks at ₹0.48 CPC.',
+    fullDescription: 'A high-retention video creative and engagement strategy deployed across 429 campaigns. Our team continuously tested video hooks and short-form assets, accumulating 4,990,420 total impressions, 2,787,388 unique users reached, and 36,462 clicks with CPCs dropping as low as ₹0.48.',
+    image: '/src/assets/images/project_meta_brand_1793425951395.jpg',
+    aspectRatio: '16:9',
+    services: ['Meta Ads Management', 'Video Editing', 'Content Strategy', 'Branding & Graphic Design'],
+    results: [
+      { label: 'Audited Impressions', value: '4.99M+', context: 'Generated across 429 live campaigns' },
+      { label: 'Unique Reach Delivered', value: '2.78M+', context: 'High-affinity consumer audience' },
+      { label: 'Lowest Link CPC', value: '₹0.48', context: 'Across 36,462 high-intent clicks' }
+    ],
+    challenge: 'Brand saturation and rising click costs in competitive social media feeds.',
+    solution: 'Engineered rapid 48-hour video creative refreshes, testing dynamic opening hooks that maximized view-through rates.',
+    featured: true
+  },
+  {
+    id: 'study-visa-funnel',
+    title: 'Global Education & Visa Consulting',
+    category: 'Lead Generation',
+    clientIndustry: 'International Education & Immigration',
+    year: '2026',
+    shortDescription: 'Full-funnel student recruitment engine delivering 1.29M impressions and admissions leads starting at ₹39.24.',
+    fullDescription: 'Recruiting qualified prospective students across UK and European study programs. Performize built high-converting video and WhatsApp funnel campaigns that reached 693,382 candidates, driving hundreds of verified consultations starting at ₹39.24 per lead.',
     image: '/src/assets/images/project_ai_automation_1793425951221.jpg',
     aspectRatio: '4:3',
-    services: ['AI Automation & Chatbots', 'Lead Generation & CRM', 'Website Development'],
+    services: ['Meta Ads Management', 'Lead Generation & CRM', 'AI Automation & Chatbots'],
     results: [
-      { label: 'Lead Response Time', value: '<45s', context: 'Down from 8+ hours manual triage' },
-      { label: 'Sales Rep Capacity', value: '3.5x', context: 'More demos booked per sales engineer' },
-      { label: 'Pipeline Closed Volume', value: '+185%', context: 'In qualified deal conversions year-over-year' }
+      { label: 'Campaign Impressions', value: '1.29M+', context: 'Across 28 targeted admissions ad sets' },
+      { label: 'Cost Per Consultation', value: '₹39.24', context: 'Substantially below ₹140 industry standard' },
+      { label: 'Qualified Student Reach', value: '693,382', context: 'High-intent applicant demographic' }
     ],
-    challenge: 'High lead volume slipping through the cracks due to timezone delays and manual spreadsheet data entry.',
-    solution: 'Built an autonomous AI qualification triage system connecting web inquiry forms directly to CRM and WhatsApp.',
+    challenge: 'High volume of unqualified inquiries driving up counselor workload and cost per enrollment.',
+    solution: 'Implemented automated WhatsApp qualification filters connected directly to counselor calendars.',
     featured: true
   },
   {
-    id: 'performize-studio-ops',
-    title: 'Performize Internal Showreel',
-    category: 'Agency Production & Media',
-    clientIndustry: 'Creative Direction & Strategy',
+    id: 'hospitality-dining',
+    title: 'Le Cafe Crush & BTS Dining Experiences',
+    category: 'Lead Generation',
+    clientIndustry: 'Hospitality, Cafes & Fine Dining',
     year: '2026',
-    shortDescription: 'A showcase of our high-intensity creative laboratory, motion graphics engineering, and performance marketing operations.',
-    fullDescription: 'Our creative agency space and production laboratory in action. We combine rigorous analytics with bold artistic direction to produce media that captures market share.',
+    shortDescription: 'Hyperlocal WhatsApp reservation funnels generating customer dining conversations at as low as ₹2.85 per lead.',
+    fullDescription: 'Promoted signature dining events, anniversary specials, and cafe launches. Utilizing localized geotargeting and dynamic carousel ads, we generated direct messaging reservations for ₹2.85 (BTS Anniversary) and ₹9.31 (Le Cafe Crush) with immediate positive cashflow.',
     image: '/src/assets/images/agency_studio_editorial_1793425952072.jpg',
     aspectRatio: '16:9',
-    services: ['Video Editing', 'Content Strategy', 'Branding & Graphic Design'],
+    services: ['Meta Ads Management', 'Social Media Management', 'Video Editing'],
     results: [
-      { label: 'Campaign Production Turnaround', value: '48h', context: 'Rapid creative iteration deployment' },
-      { label: 'Client Retention Rate', value: '94%', context: 'Long-term agency growth partnership' },
-      { label: 'Creative Fatigue Reduction', value: '-80%', context: 'Through continuous automated variant testing' }
+      { label: 'Lowest Inbound Cost', value: '₹2.85', context: 'Per verified WhatsApp reservation lead' },
+      { label: 'Campaign Ad Spend', value: '₹133 – ₹903', context: 'Maximum capital efficiency' },
+      { label: 'Direct Inquiries', value: '250+', context: 'Qualified dining reservations generated' }
     ],
-    challenge: 'Scaling high-production creative output without sacrificing bespoke craftsmanship or strategic rigor.',
-    solution: 'Integrated production pipeline unifying strategy, design, video editing, and live performance metrics under one roof.',
+    challenge: 'Inconsistent weekday footfall and reliance on expensive third-party food discovery platforms.',
+    solution: 'Built direct-to-WhatsApp booking campaigns giving the restaurant full ownership of customer contact data.',
     featured: false
   }
 ];
@@ -262,10 +262,10 @@ export const AGENCY_PROCESS: ProcessStep[] = [
 ];
 
 export const AGENCY_METRICS = [
-  { value: '$48M+', label: 'Client Revenue Generated' },
-  { value: '3.8x', label: 'Average Blended ROAS' },
-  { value: '94%', label: 'Partner Retention Rate' },
-  { value: '180+', label: 'Campaigns Deployed' }
+  { value: '4.99M+', label: 'Audited Ad Impressions' },
+  { value: '2.78M+', label: 'Unique Reach Delivered' },
+  { value: '390+', label: 'Verified Purchases (Page 5)' },
+  { value: '₹2.85', label: 'Lowest Cost / Inbound Lead' }
 ];
 
 export const WHY_PERFORMIZE = [

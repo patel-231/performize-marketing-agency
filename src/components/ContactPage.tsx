@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, Check, Clock, Mail, MapPin, MessageCircle, Phone, Send, ShieldCheck } from 'lucide-react';
 import { AGENCY_SERVICES } from '../data/agencyData';
+import { motion } from 'motion/react';
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +10,7 @@ export const ContactPage: React.FC = () => {
     email: '',
     phone: '',
     services: [] as string[],
-    budget: '$5,000 - $15,000 / mo',
+    budget: '₹50,000 - ₹1,50,000 / mo',
     message: ''
   });
 
@@ -38,7 +39,12 @@ export const ContactPage: React.FC = () => {
     <div className="pt-32 pb-24 bg-[#0B0B0C] min-h-screen">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         {/* Header */}
-        <div className="border-b border-[#1F1F24] pb-12 mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="border-b border-[#1F1F24] pb-12 mb-16"
+        >
           <div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-[#CCFF00] font-semibold mb-3">
             <span>Direct Access</span>
             <span className="text-[#858585]">/ Project Inquiries</span>
@@ -53,12 +59,17 @@ export const ContactPage: React.FC = () => {
             Ready to discuss a project, scale paid acquisition, or engineer 24/7 AI lead automation?
             Fill out the brief below or connect directly via WhatsApp or email.
           </p>
-        </div>
+        </motion.div>
 
         {/* 2-Column Split: Form (7 cols) + Direct Contact Info (5 cols) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Intake Form */}
-          <div className="lg:col-span-7 p-8 sm:p-10 rounded-2xl bg-[#121214] border border-[#222227] shadow-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="lg:col-span-7 p-8 sm:p-10 rounded-2xl bg-[#121214] border border-[#222227] shadow-2xl"
+          >
             {submitted ? (
               <div className="text-center py-12 space-y-6 animate-fadeIn">
                 <div className="w-16 h-16 rounded-full bg-[#CCFF00]/20 text-[#CCFF00] flex items-center justify-center mx-auto border border-[#CCFF00]/40">
@@ -193,11 +204,11 @@ export const ContactPage: React.FC = () => {
                     onChange={e => setFormData({ ...formData, budget: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-[#0B0B0C] border border-[#26262B] focus:border-[#E60023] focus:outline-none text-sm text-[#F5F5F5]"
                   >
-                    <option>&lt; $5,000 / mo</option>
-                    <option>$5,000 - $15,000 / mo</option>
-                    <option>$15,000 - $35,000 / mo</option>
-                    <option>$35,000+ / mo</option>
-                    <option>One-Off Project / Sprint</option>
+                    <option>&lt; ₹50,000 / mo</option>
+                    <option>₹50,000 - ₹1,50,000 / mo</option>
+                    <option>₹1,50,000 - ₹5,00,000 / mo</option>
+                    <option>₹5,00,000+ / mo</option>
+                    <option>One-Off Sprint / Launch</option>
                   </select>
                 </div>
 
@@ -230,10 +241,15 @@ export const ContactPage: React.FC = () => {
                 </button>
               </form>
             )}
-          </div>
+          </motion.div>
 
           {/* Direct Channels & Contact Info */}
-          <div className="lg:col-span-5 space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="lg:col-span-5 space-y-8"
+          >
             {/* WhatsApp Direct Card */}
             <div className="p-8 rounded-2xl bg-[#121214] border border-[#222227] space-y-4">
               <div className="flex items-center gap-3">
@@ -306,7 +322,7 @@ export const ContactPage: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

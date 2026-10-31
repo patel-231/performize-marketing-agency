@@ -200,10 +200,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </div>
               <div className="text-xs">
                 <div className="font-mono-numbers font-bold text-[#F5F5F5] text-sm leading-tight">
-                  3.8x Blended ROAS
+                  ₹2.85 / Lead · 4.99M+ Impr
                 </div>
                 <div className="text-[#858585] text-[11px] mt-0.5">
-                  Performance across Meta & Google campaigns
+                  Verified Meta Ads live account data
                 </div>
               </div>
             </div>

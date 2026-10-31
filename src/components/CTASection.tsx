@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowUpRight, Mail, MessageCircle, PhoneCall } from 'lucide-react';
+import { ArrowUpRight, Mail, MessageCircle } from 'lucide-react';
+import { motion } from 'motion/react';
 
 interface CTASectionProps {
   onStartProject: () => void;
@@ -14,25 +15,49 @@ export const CTASection: React.FC<CTASectionProps> = ({ onStartProject }) => {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 text-center">
         {/* Editorial Subtitle */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#121214] border border-[#26262B] text-xs font-mono-numbers text-[#CCFF00] uppercase tracking-widest mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#121214] border border-[#26262B] text-xs font-mono-numbers text-[#CCFF00] uppercase tracking-widest mb-8"
+        >
           <span>Scale Your Authority</span>
-        </div>
+        </motion.div>
 
         {/* Oversized Headline */}
-        <h2 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#F5F5F5] uppercase tracking-tight leading-[1.02] max-w-5xl mx-auto text-balance">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#F5F5F5] uppercase tracking-tight leading-[1.02] max-w-5xl mx-auto text-balance"
+        >
           Ready To Make Your Brand{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E60023] via-[#FF1E38] to-[#FF4D64]">
             Impossible To Ignore?
           </span>
-        </h2>
+        </motion.h2>
 
-        <p className="mt-8 text-base sm:text-xl text-[#858585] max-w-2xl mx-auto font-light leading-relaxed">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-8 text-base sm:text-xl text-[#858585] max-w-2xl mx-auto font-light leading-relaxed"
+        >
           Book an introductory growth consultation. We’ll audit your existing media,
           pinpoint where qualified leads are slipping, and draft a high-velocity roadmap.
-        </p>
+        </motion.p>
 
         {/* Action Group */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mt-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-wrap items-center justify-center gap-4 mt-12"
+        >
           <button
             onClick={onStartProject}
             data-cursor="explore"
@@ -59,16 +84,22 @@ export const CTASection: React.FC<CTASectionProps> = ({ onStartProject }) => {
             <Mail className="w-4 h-4" />
             <span>hello@performize.agency</span>
           </a>
-        </div>
+        </motion.div>
 
         {/* Guarantees */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-xs text-[#858585] font-mono-numbers">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="flex flex-wrap items-center justify-center gap-6 mt-12 text-xs text-[#858585] font-mono-numbers"
+        >
           <span>✓ Guaranteed Response Within 2 Hours</span>
           <span className="hidden sm:inline">·</span>
           <span>✓ Direct Strategy Director Access</span>
           <span className="hidden sm:inline">·</span>
           <span>✓ Non-Disclosure Protected</span>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

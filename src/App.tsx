@@ -9,6 +9,7 @@ import { ServicesOverviewSection } from './components/ServicesOverviewSection';
 import { PhilosophySection } from './components/PhilosophySection';
 import { ProcessSection } from './components/ProcessSection';
 import { WhyPerformizeSection } from './components/WhyPerformizeSection';
+import { MetaInsightsSection } from './components/MetaInsightsSection';
 import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 import { WorkPage } from './components/WorkPage';
@@ -79,6 +80,8 @@ export default function App() {
               onSelectProject={(p) => setSelectedProject(p)}
               onViewAllWork={() => navigateTo('work')}
             />
+            {/* Audited Meta Ads Manager Performance & Animated Data Graph */}
+            <MetaInsightsSection />
             <ServicesOverviewSection
               onSelectService={handleSelectService}
               onEnquireService={(title) => handleOpenEnquiry(title)}
@@ -101,6 +104,13 @@ export default function App() {
           <ServicesPage
             onEnquireForService={(title) => handleOpenEnquiry(title)}
           />
+        )}
+
+        {currentPage === 'insights' && (
+          <div className="pt-28 bg-[#0B0B0C] min-h-screen">
+            <MetaInsightsSection />
+            <CTASection onStartProject={() => handleOpenEnquiry()} />
+          </div>
         )}
 
         {currentPage === 'about' && (

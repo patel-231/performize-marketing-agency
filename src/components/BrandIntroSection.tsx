@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { BRAND_VALUES } from '../data/agencyData';
+import { motion } from 'motion/react';
 
 interface BrandIntroSectionProps {
   onLearnMore: () => void;
@@ -14,7 +15,13 @@ export const BrandIntroSection: React.FC<BrandIntroSectionProps> = ({ onLearnMor
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         {/* Editorial Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 border-b border-[#1F1F24] pb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 border-b border-[#1F1F24] pb-8"
+        >
           <div>
             <div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-[#CCFF00] font-semibold mb-3">
               <span>Agency Manifesto</span>
@@ -32,12 +39,18 @@ export const BrandIntroSection: React.FC<BrandIntroSectionProps> = ({ onLearnMor
             <span>Our Full Story</span>
             <ArrowUpRight className="w-4 h-4" />
           </button>
-        </div>
+        </motion.div>
 
         {/* Asymmetrical Split Editorial Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Large Lead Paragraph (7 cols) */}
-          <div className="lg:col-span-7 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7 space-y-6"
+          >
             <p className="font-display text-2xl sm:text-3xl text-[#F5F5F5] font-light leading-snug">
               In an overcrowded digital landscape dominated by recycled templates and timid marketing,
               <span className="text-[#FF1E38] font-bold"> being safe is the highest risk of all</span>.
@@ -51,15 +64,21 @@ export const BrandIntroSection: React.FC<BrandIntroSectionProps> = ({ onLearnMor
               We do not chase vanity metrics or produce ornamental campaigns. We design undeniable brand identities
               and construct ruthless acquisition engines that turn ambitious brands into category leaders.
             </p>
-          </div>
+          </motion.div>
 
           {/* Key Pillars / Values List (5 cols) */}
-          <div className="lg:col-span-5 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 space-y-6"
+          >
             <h3 className="text-xs font-mono-numbers uppercase tracking-widest text-[#858585] border-b border-[#1F1F24] pb-3">
               Core Operational Invariants
             </h3>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {BRAND_VALUES.map((val, idx) => (
                 <div
                   key={val.title}
@@ -79,7 +98,7 @@ export const BrandIntroSection: React.FC<BrandIntroSectionProps> = ({ onLearnMor
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

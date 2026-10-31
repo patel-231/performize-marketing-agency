@@ -54,6 +54,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEnquiry }) => 
                 </button>
               </li>
               <li>
+                <button onClick={() => handleLink('insights')} className="hover:text-[#CCFF00] transition-colors cursor-pointer flex items-center gap-1">
+                  <span>Meta Ads Insights</span>
+                  <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#E60023] text-white">Live</span>
+                </button>
+              </li>
+              <li>
                 <button onClick={() => handleLink('about')} className="hover:text-[#F5F5F5] transition-colors cursor-pointer">
                   About Performize
                 </button>

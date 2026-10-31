@@ -19,7 +19,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
     email: '',
     phone: '',
     selectedServices: preselectedService ? [preselectedService] : [] as string[],
-    budget: '$5,000 - $15,000 / mo',
+    budget: '₹50,000 - ₹1,50,000 / mo',
     overview: ''
   });
 
@@ -41,11 +41,11 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
   };
 
   const budgetOptions = [
-    '< $5,000 / mo',
-    '$5,000 - $15,000 / mo',
-    '$15,000 - $35,000 / mo',
-    '$35,000+ / mo',
-    'One-off Project'
+    '< ₹50,000 / mo',
+    '₹50,000 - ₹1,50,000 / mo',
+    '₹1,50,000 - ₹5,00,000 / mo',
+    '₹5,00,000+ / mo',
+    'One-Off Sprint / Launch'
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
