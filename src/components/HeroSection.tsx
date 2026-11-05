@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowUpRight, Play, Sparkles, TrendingUp, Zap, MessageCircle } from 'lucide-react';
-import gsap from 'gsap';
+import { ArrowUpRight, Play, TrendingUp, Zap, MessageCircle, Sparkles, CheckCircle2 } from 'lucide-react';
 import { AGENCY_METRICS, createWhatsAppUrl } from '../data/agencyData';
+import gsap from 'gsap';
 
 interface HeroSectionProps {
   onStartProject: () => void;
   onExploreWork: () => void;
-  onOpenShowreel?: () => void;
+  onOpenShowreel: () => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
@@ -14,40 +14,46 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onExploreWork,
   onOpenShowreel
 }) => {
-  const heroRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const copyRef = useRef<HTMLDivElement>(null);
   const mediaRef = useRef<HTMLDivElement>(null);
   const tickerRef = useRef<HTMLDivElement>(null);
+  const certRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Staggered hero entrance
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       tl.from('.hero-badge', {
-        y: -20,
+        y: -15,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.7,
         delay: 0.1
       })
       .from('.hero-title-line', {
-        y: 60,
+        y: 40,
         opacity: 0,
-        duration: 1,
-        stagger: 0.15
-      }, '-=0.5')
+        duration: 1.1,
+        stagger: 0.15,
+        ease: 'power4.out'
+      }, '-=0.4')
       .from(copyRef.current, {
-        y: 30,
+        y: 25,
+        opacity: 0,
+        duration: 0.9
+      }, '-=0.7')
+      .from(mediaRef.current, {
+        scale: 0.95,
+        opacity: 0,
+        duration: 1.1,
+        ease: 'power3.out'
+      }, '-=0.8')
+      .from(certRef.current, {
+        y: 20,
         opacity: 0,
         duration: 0.8
       }, '-=0.6')
-      .from(mediaRef.current, {
-        scale: 0.94,
-        opacity: 0,
-        duration: 1.1,
-        ease: 'power2.out'
-      }, '-=0.7')
       .from(tickerRef.current, {
         y: 20,
         opacity: 0,
@@ -75,61 +81,81 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="hero-badge flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.22em] text-[#858585] mb-6">
           <span className="flex items-center gap-1.5 text-[#CCFF00] font-semibold">
             <Zap className="w-3.5 h-3.5" />
-            <span>Creative Performance Engine</span>
+            <span>Creative Performance Marketing</span>
           </span>
           <span aria-hidden="true" className="text-[#333338]">·</span>
-          <span>Digital Strategy</span>
+          <span>Meta &amp; Google Ads Specialists</span>
           <span aria-hidden="true" className="text-[#333338]">·</span>
           <span>Next-Gen Brand Scale</span>
         </div>
 
         {/* 2-Column Asymmetric Hero Split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-stretch">
-          {/* Column 1: Oversized Expressive Typography & Proposition (7 cols) */}
+          {/* Column 1: Inspired by Reference Design in Brand Palette (7 cols) */}
           <div className="lg:col-span-7 flex flex-col justify-center">
+            {/* Main Headline: "Optimize Your Ads For More Profit." */}
             <h1
               ref={headlineRef}
-              className="font-display font-extrabold text-4xl sm:text-6xl xl:text-7xl leading-[1.04] tracking-[-0.03em] uppercase text-[#F5F5F5] mb-8 text-balance"
+              className="font-display font-extrabold text-4xl sm:text-6xl xl:text-7xl leading-[1.05] tracking-[-0.03em] text-[#F5F5F5] mb-6 text-balance"
             >
               <span className="block hero-title-line">
-                Make Your Brand
+                Optimize Your Ads
               </span>
-              <span className="block hero-title-line text-transparent bg-clip-text bg-gradient-to-r from-[#E60023] via-[#FF1E38] to-[#FF4D64] drop-shadow-[0_4px_30px_rgba(230,0,35,0.4)]">
-                Impossible
-              </span>
-              <span className="block hero-title-line flex items-center flex-wrap gap-x-4">
-                <span>To Ignore</span>
-                <span className="inline-block text-[#CCFF00] font-mono-numbers text-2xl sm:text-4xl align-middle font-light">
-                  [+]
+              <span className="relative inline-block hero-title-line mt-1">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E60023] via-[#FF1E38] to-[#FF4D64] drop-shadow-[0_4px_30px_rgba(230,0,35,0.4)]">
+                  For More Profit.
                 </span>
+                
+                {/* Dynamic Curved Swoosh Underline in Electric Yellow with Pencil/Spark Accent */}
+                <svg
+                  className="absolute -bottom-3 sm:-bottom-4 left-0 w-full h-4 sm:h-5 text-[#CCFF00] overflow-visible pointer-events-none"
+                  viewBox="0 0 320 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 14C65 4 200 4 315 15"
+                    stroke="currentColor"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                  />
+                  {/* Subtle pencil/spark accent tip */}
+                  <circle cx="317" cy="15" r="2.5" fill="#E60023" />
+                </svg>
               </span>
             </h1>
 
-            {/* Supporting Text */}
-            <div ref={copyRef} className="space-y-8 max-w-xl">
-              <p className="text-lg sm:text-xl text-[#858585] font-light leading-relaxed">
-                We combine <span className="text-[#F5F5F5] font-medium">creativity</span>,{' '}
-                <span className="text-[#F5F5F5] font-medium">technology</span> and{' '}
-                <span className="text-[#F5F5F5] font-medium">digital strategy</span> to help brands build
-                stronger identities and create meaningful growth.
+            {/* Key Agency Track Record Line from Reference: "5+ years | 511+ Brands | 60+ Crore Ad spent" */}
+            <div className="py-2.5 px-4 rounded-xl bg-[#121214] border border-[#222227] inline-flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm font-mono-numbers text-[#F5F5F5] font-semibold w-fit mb-5 shadow-inner">
+              <span className="text-[#CCFF00]">5+ Years</span>
+              <span className="text-[#333338]">|</span>
+              <span className="text-[#F5F5F5]">511+ Brands Scaled</span>
+              <span className="text-[#333338]">|</span>
+              <span className="text-[#FF1E38]">₹60+ Crore Ad Spent</span>
+            </div>
+
+            {/* Sub-headline from Reference */}
+            <div ref={copyRef} className="space-y-6 max-w-xl">
+              <p className="text-base sm:text-lg text-[#858585] font-light leading-relaxed">
+                A dedicated team of specialists, delivering remarkable work to our clients worldwide! We combine high-velocity creative testing, AI-driven attribution, and full-funnel media buying to build category leaders.
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-3.5 pt-2">
+              <div className="flex flex-wrap items-center gap-3.5 pt-1">
                 <button
                   onClick={onStartProject}
                   data-cursor="explore"
-                  className="group relative px-8 py-4 rounded-full bg-[#E60023] hover:bg-[#FF1E38] text-white font-display font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-[0_0_30px_rgba(230,0,35,0.5)] hover:shadow-[0_0_40px_rgba(255,30,56,0.7)] flex items-center gap-3 cursor-pointer active:scale-95"
+                  className="group relative px-8 py-4 rounded-xl bg-[#E60023] hover:bg-[#FF1E38] text-white font-display font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-[0_0_30px_rgba(230,0,35,0.5)] hover:shadow-[0_0_40px_rgba(255,30,56,0.7)] flex items-center gap-3 cursor-pointer active:scale-95"
                 >
-                  <span>Start a Project</span>
+                  <span>Book a Strategy Call</span>
                   <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </button>
 
                 <a
-                  href={createWhatsAppUrl("Hi Arman, I would like to book a Free Business & Ad Account Audit for my brand with Performize.")}
+                  href={createWhatsAppUrl("Hi Arman, I would like to book a Free Strategy Audit for my brand with Performize.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-4 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-display font-black text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-[0_0_20px_rgba(37,211,102,0.3)] active:scale-95"
+                  className="px-6 py-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-display font-black text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-[0_0_20px_rgba(37,211,102,0.3)] active:scale-95"
                 >
                   <MessageCircle className="w-4 h-4 fill-[#0B0B0C]" />
                   <span>WhatsApp: Free Audit</span>
@@ -138,17 +164,56 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <button
                   onClick={onExploreWork}
                   data-cursor="project"
-                  className="px-6 py-4 rounded-full bg-[#121214] hover:bg-[#1A1A1E] text-[#F5F5F5] border border-[#26262B] hover:border-[#CCFF00]/50 font-display font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95"
+                  className="px-6 py-4 rounded-xl bg-[#121214] hover:bg-[#1A1A1E] text-[#F5F5F5] border border-[#26262B] hover:border-[#CCFF00]/50 font-display font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95"
                 >
                   <span>Explore Work</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-[#CCFF00]" />
                 </button>
               </div>
 
-              {/* Client Satisfaction / Real-Time Guarantee Note */}
-              <div className="flex items-center gap-3 pt-2 text-xs text-[#858585]">
-                <div className="w-2 h-2 rounded-full bg-[#CCFF00] animate-pulse" />
-                <span>Currently onboarding select brands for Q4 / Q1 growth cycles</span>
+              {/* Certified By Trust Bar from Reference */}
+              <div ref={certRef} className="pt-4 border-t border-[#1F1F24]/80">
+                <span className="text-[11px] uppercase tracking-wider text-[#858585] font-mono-numbers block mb-3 font-medium">
+                  Our Performance Marketing Services are Certified by
+                </span>
+                
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                  {/* Meta Business Partner */}
+                  <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#121214] border border-[#222227] hover:border-[#0081FB]/50 transition-colors">
+                    <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#0081FB] fill-current shrink-0">
+                      <path d="M16.99 0H7.01C3.14 0 0 3.14 0 7.01v9.98C0 20.86 3.14 24 7.01 24h9.98c3.87 0 7.01-3.14 7.01-7.01V7.01C24 3.14 20.86 0 16.99 0zm-1.89 16.5c-1.39 0-2.47-.94-3.1-1.92-.63.98-1.71 1.92-3.1 1.92-2.12 0-3.65-1.76-3.65-4.5 0-2.74 1.53-4.5 3.65-4.5 1.45 0 2.54.98 3.1 1.92.56-.94 1.65-1.92 3.1-1.92 2.12 0 3.65 1.76 3.65 4.5 0 2.74-1.53 4.5-3.65 4.5zm0-7.2c-1.12 0-1.99 1.1-1.99 2.7 0 1.6.87 2.7 1.99 2.7 1.12 0 1.99-1.1 1.99-2.7 0-1.6-.87-2.7-1.99-2.7zm-6.2 0c-1.12 0-1.99 1.1-1.99 2.7 0 1.6.87 2.7 1.99 2.7 1.12 0 1.99-1.1 1.99-2.7 0-1.6-.87-2.7-1.99-2.7z" />
+                    </svg>
+                    <div className="flex flex-col leading-tight">
+                      <span className="font-display font-extrabold text-xs text-[#F5F5F5] tracking-tight">Meta</span>
+                      <span className="text-[9px] text-[#858585] uppercase tracking-wider font-mono-numbers">Business Partner</span>
+                    </div>
+                  </div>
+
+                  {/* Shopify Partners */}
+                  <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#121214] border border-[#222227] hover:border-[#95BF47]/50 transition-colors">
+                    <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0" fill="none">
+                      <path d="M19.9 8.2c-.1-.3-.3-.4-.5-.4-.1 0-1.5.1-1.5.1s-1.2-3.3-1.3-3.6c-.1-.3-.4-.4-.7-.4h-.3c-.3 0-1.9.1-3 .5-.8-.8-1.8-1.3-3-1.3-2.3 0-3.8 1.8-3.8 4.4 0 .9.2 1.8.6 2.6l-2.4.7c-.4.1-.6.5-.5.9l2.4 12.3c.1.4.4.7.8.7h8.8c.4 0 .8-.3.8-.7l4.3-15.3c0-.1 0-.3-.1-.5zm-4.3-.4l-1.3-.4c-.2-.1-.4 0-.4.2l-.7 2.3-1.7-.5c.8-1.5 2.1-2.4 3.7-2.8l.4 1.2zm-6-2.9c0-1.7 1-2.9 2.5-2.9.7 0 1.3.3 1.8.8-1.4.5-2.6 1.4-3.4 2.8-.6-.2-.9-.5-.9-.7zm.9 3.8c.2-.5.5-1 1-1.4l1.3.4-3.1 7.2-.6-3.1 1.4-3.1zm1.7 12.3l-2.1-10.8 1.4-.4 2.8 6.5c.2.4.6.6 1 .4.4-.2.6-.6.4-1l-2.7-6.2 1.4-.4.8 2.7c.1.3.4.5.7.5s.6-.1.7-.4l1-3.2 2.1.6-4.1 14.7h-7.6z" fill="#95BF47" />
+                    </svg>
+                    <div className="flex flex-col leading-tight">
+                      <span className="font-display font-extrabold text-xs text-[#95BF47] tracking-tight">shopify</span>
+                      <span className="text-[9px] text-[#858585] uppercase tracking-wider font-mono-numbers">partners</span>
+                    </div>
+                  </div>
+
+                  {/* Google Partner */}
+                  <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#121214] border border-[#222227] hover:border-[#4285F4]/50 transition-colors">
+                    <div className="flex items-center gap-0.5 shrink-0">
+                      <span className="w-1.5 h-4 rounded-sm bg-[#4285F4]" />
+                      <span className="w-1.5 h-4 rounded-sm bg-[#EA4335]" />
+                      <span className="w-1.5 h-4 rounded-sm bg-[#FBBC05]" />
+                      <span className="w-1.5 h-4 rounded-sm bg-[#34A853]" />
+                    </div>
+                    <div className="flex flex-col leading-tight">
+                      <span className="font-display font-extrabold text-xs text-[#F5F5F5] tracking-tight">Google</span>
+                      <span className="text-[9px] text-[#858585] uppercase tracking-wider font-mono-numbers">Partner</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -162,7 +227,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Aspect Ratio 16:9 Image with Dark Vignette Scrim */}
               <div className="relative aspect-[16/10] sm:aspect-[16/11] overflow-hidden">
                 <img
-                  src="/src/assets/images/hero_marketing_monolith_1793790555026.jpg"
+                  src="/assets/images/hero_marketing_monolith_1793790555026.jpg"
                   alt="Performize Digital Marketing Agency — Skyscraper Monoliths and Live Ad Telemetry"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -189,7 +254,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     The Art of Non-Conformity
                   </h4>
                   <p className="text-xs text-[#858585] mt-0.5">
-                    Agency Methodology & Kinetic Showreel
+                    Agency Methodology &amp; Kinetic Showreel
                   </p>
                 </div>
 
@@ -221,7 +286,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
       </div>
 
-      {/* Full-width KPI Proof Strip below Hero Split (strictly follows §13 Spatial & 2-Column Balance) */}
+      {/* Full-width KPI Proof Strip below Hero Split */}
       <div
         ref={tickerRef}
         className="w-full border-y border-[#1F1F24] bg-[#0E0E10] mt-16 py-6 relative z-10"

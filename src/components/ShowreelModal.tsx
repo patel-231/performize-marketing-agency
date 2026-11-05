@@ -29,7 +29,7 @@ export const ShowreelModal: React.FC<ShowreelModalProps> = ({
         {/* Video / Visual Container */}
         <div className="relative aspect-[16/9] w-full bg-[#0B0B0C] overflow-hidden group">
           <img
-            src="/src/assets/images/agency_production_studio_1793790556606.jpg"
+            src="/assets/images/agency_production_studio_1793790556606.jpg"
             alt="Performize Agency Cinema Workstation and Creative Production Studio"
             className="w-full h-full object-cover opacity-85"
             referrerPolicy="no-referrer"

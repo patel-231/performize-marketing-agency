@@ -225,7 +225,7 @@ export const AGENCY_PROJECTS: Project[] = [
     year: '2026',
     shortDescription: 'High-intent creative testing and catalog retargeting generating 2,896 website adds-to-cart at ₹0.96 per cart.',
     fullDescription: 'Karpasa Online needed to lower customer acquisition costs and drive purchase intent. Performize deployed high-performing dynamic creatives and audience retargeting that delivered 2,896 website adds-to-cart at ₹0.96 per action, 1,132 landing page views at ₹1.34, reaching 113,407 target buyers on a lean ₹2,767 budget.',
-    image: '/src/assets/images/d2c_ecommerce_case_study_1793790557234.jpg',
+    image: '/assets/images/d2c_ecommerce_case_study_1793790557234.jpg',
     aspectRatio: '4:3',
     services: ['Meta Ads Management', 'Website Development', 'Conversion Optimisation'],
     results: [
@@ -245,7 +245,7 @@ export const AGENCY_PROJECTS: Project[] = [
     year: '2026',
     shortDescription: 'Over 1.0M reach and ₹1.09L spend delivering 674 purchases at 4.55x ROAS and link clicks down to ₹0.48 CPC.',
     fullDescription: 'Scaled Gentlemens Attire across Meta Ads using dynamic video creative iterations and catalog retargeting. Delivered 1,003,853 unique audience reach across 23 campaigns on ₹1,09,548 ad spend, yielding 674 purchases with a 4.55x ROAS and link CPCs as low as ₹0.48.',
-    image: '/src/assets/images/fashion_d2c_case_study_1793790557429.jpg',
+    image: '/assets/images/fashion_d2c_case_study_1793790557429.jpg',
     aspectRatio: '16:9',
     services: ['Meta Ads Management', 'Ad Creative & UGC', 'Conversion Optimisation'],
     results: [
@@ -265,7 +265,7 @@ export const AGENCY_PROJECTS: Project[] = [
     year: '2026',
     shortDescription: 'Multi-brand e-commerce campaigns generating 641 purchases and 802K+ reach across targeted catalog funnels.',
     fullDescription: 'Deployed conversion-focused campaigns for Magic Kart (272 purchases, 177K reach at ₹53.23 avg CPA) and TEAOFY (369 purchases on ₹50,000 spend at ₹135.50 CPA), backed by cross-campaign reach scaling across avmarrts (625,005 reach across 25 campaigns).',
-    image: '/src/assets/images/d2c_ecommerce_case_study_1793790557234.jpg',
+    image: '/assets/images/d2c_ecommerce_case_study_1793790557234.jpg',
     aspectRatio: '4:3',
     services: ['Meta Ads Management', 'Google Ads Management', 'Analytics & Tracking'],
     results: [
@@ -285,7 +285,7 @@ export const AGENCY_PROJECTS: Project[] = [
     year: '2026',
     shortDescription: 'Predictable high-intent lead funnels generating 500+ verified inquiries/month at ₹2.85 to ₹39.24 per lead.',
     fullDescription: 'Built full-funnel lead generation architectures for Fly High Visas, White Sand Residency, and local hospitality clients. Achieved 500+ leads/month with CPLs starting at ₹2.85 for direct messaging inquiries up to ₹39.24 for overseas university consultations, routing all leads to sales in < 2 seconds.',
-    image: '/src/assets/images/ai_automation_funnel_1793790557532.jpg',
+    image: '/assets/images/ai_automation_funnel_1793790557532.jpg',
     aspectRatio: '16:9',
     services: ['Meta Ads Management', 'Lead Generation & CRM', 'AI Automation & Chatbots'],
     results: [
