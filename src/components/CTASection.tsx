@@ -68,21 +68,21 @@ export const CTASection: React.FC<CTASectionProps> = ({ onStartProject }) => {
           </button>
 
           <a
-            href="https://wa.me/15550192834?text=Hi%20Performize%20Team%2C%20I%20would%20like%20to%20discuss%20a%20project."
+            href="https://wa.me/919528074537?text=Hi%20Arman%2C%20I%20would%20like%20to%20audit%20my%20ad%20campaigns%20and%20discuss%20a%20growth%20strategy%20with%20Performize."
             target="_blank"
             rel="noopener noreferrer"
-            className="px-7 py-5 rounded-full bg-[#121214] hover:bg-[#1A1A1E] text-[#F5F5F5] border border-[#26262B] hover:border-[#CCFF00]/50 font-display font-semibold text-sm tracking-wider uppercase transition-all duration-300 flex items-center gap-2.5 cursor-pointer active:scale-95"
+            className="px-8 py-5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-display font-black text-sm tracking-wider uppercase transition-all duration-300 flex items-center gap-2.5 cursor-pointer shadow-[0_0_25px_rgba(37,211,102,0.4)] active:scale-95"
           >
-            <MessageCircle className="w-4 h-4 text-[#CCFF00]" />
-            <span>Chat on WhatsApp</span>
+            <MessageCircle className="w-5 h-5 fill-[#0B0B0C]" />
+            <span>Chat on WhatsApp (+91 95280 74537)</span>
           </a>
 
           <a
-            href="mailto:hello@performize.agency"
+            href="mailto:mirzafaiz0852@gmail.com"
             className="px-7 py-5 rounded-full bg-[#121214] hover:bg-[#1A1A1E] text-[#858585] hover:text-[#F5F5F5] border border-[#26262B] font-display font-medium text-sm tracking-wider uppercase transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95"
           >
             <Mail className="w-4 h-4" />
-            <span>hello@performize.agency</span>
+            <span>mirzafaiz0852@gmail.com</span>
           </a>
         </motion.div>
 

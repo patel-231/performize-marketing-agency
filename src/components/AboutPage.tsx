@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrandLogo } from './BrandLogo';
-import { Compass, Eye } from 'lucide-react';
+import { Compass, Eye, MessageCircle, ArrowUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import { FOUNDER_PROFILE, AGENCY_FAQS, createWhatsAppUrl } from '../data/agencyData';
 
 interface AboutPageProps {
   onStartProject: () => void;
@@ -146,13 +147,159 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartProject }) => {
           </div>
         </motion.div>
 
+        {/* Founder & Agency Leadership */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6 }}
+          className="p-8 sm:p-12 rounded-2xl bg-[#121214] border border-[#26262B] grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-20 relative overflow-hidden"
+        >
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#E60023]/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#CCFF00]/5 rounded-full blur-[80px] pointer-events-none" />
+
+          {/* Founder Portrait Column */}
+          <div className="lg:col-span-4 relative flex flex-col items-center">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[4/5] rounded-2xl overflow-hidden border border-[#2A2A30] bg-[#0E0E10] shadow-[0_20px_50px_rgba(0,0,0,0.8)] group">
+              <img
+                src={FOUNDER_PROFILE.photo}
+                alt={`${FOUNDER_PROFILE.name} — ${FOUNDER_PROFILE.title}`}
+                className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-transparent to-transparent opacity-70" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#E60023]/20 via-transparent to-transparent opacity-40 mix-blend-screen" />
+
+              {/* Status pill on photo */}
+              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between p-2 rounded-xl bg-[#0B0B0C]/85 backdrop-blur-md border border-white/10">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
+                  <span className="text-[11px] font-mono-numbers text-[#F5F5F5] font-semibold">Active & Available</span>
+                </div>
+                <span className="text-[10px] uppercase font-mono-numbers text-[#CCFF00] font-bold">FOUNDER</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Founder Bio and Credentials Column */}
+          <div className="lg:col-span-8 space-y-5">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E60023]/15 border border-[#E60023]/30 text-[#FF1E38] text-xs font-mono-numbers font-semibold">
+              <span>AGENCY FOUNDER &amp; GROWTH ARCHITECT</span>
+            </div>
+            
+            <div>
+              <h3 className="font-display font-extrabold text-3xl sm:text-4xl text-[#F5F5F5] uppercase tracking-tight">
+                {FOUNDER_PROFILE.name}
+              </h3>
+              <p className="text-xs uppercase font-mono-numbers text-[#CCFF00] tracking-wider font-semibold mt-1">
+                {FOUNDER_PROFILE.title} · {FOUNDER_PROFILE.specialty}
+              </p>
+            </div>
+
+            <p className="text-[#F5F5F5] text-base leading-relaxed font-light">
+              "{FOUNDER_PROFILE.bio}"
+            </p>
+
+            <p className="text-xs text-[#858585] leading-relaxed">
+              Serving ambitious brands across India and internationally — managing ₹1.2Cr+ in ad spend, launching 500+ campaigns, and engineering automated lead-to-booking pipelines that eliminate operational friction.
+            </p>
+
+            <div className="pt-1 flex flex-wrap gap-2">
+              {FOUNDER_PROFILE.credentials.map((cred) => (
+                <span key={cred} className="px-2.5 py-1 rounded-md bg-[#1A1A1E] border border-[#26262B] text-[11px] text-[#858585] font-mono-numbers hover:text-[#CCFF00] hover:border-[#CCFF00]/40 transition-colors">
+                  {cred}
+                </span>
+              ))}
+            </div>
+
+            <div className="pt-3 flex flex-wrap items-center gap-4">
+              <a
+                href={createWhatsAppUrl("Hi Arman, I read your background and track record on Performize. I would like to consult with you directly on scaling our marketing.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-display font-black text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2 shadow-[0_0_20px_rgba(37,211,102,0.3)]"
+              >
+                <MessageCircle className="w-4 h-4 fill-[#0B0B0C]" />
+                <span>Chat Directly on WhatsApp</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+              <a
+                href={FOUNDER_PROFILE.calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-full bg-[#1A1A1E] text-[#F5F5F5] border border-[#26262B] hover:border-[#CCFF00]/40 text-xs uppercase tracking-wider font-semibold transition-colors"
+              >
+                Book 1-on-1 Strategy Call
+              </a>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Real Frequently Asked Questions */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
+        >
+          <div className="text-center mb-12">
+            <span className="text-xs font-mono-numbers uppercase tracking-widest text-[#CCFF00] block mb-2">
+              Clear Answers
+            </span>
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#F5F5F5] uppercase tracking-tight">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+            {AGENCY_FAQS.map((faq) => (
+              <div key={faq.question} className="p-6 rounded-2xl bg-[#121214] border border-[#222227] space-y-3">
+                <h4 className="font-display font-bold text-base text-[#F5F5F5]">
+                  {faq.question}
+                </h4>
+                <p className="text-xs text-[#858585] leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Quick FAQ Question WhatsApp Banner */}
+          <div className="max-w-3xl mx-auto p-5 rounded-2xl bg-[#121214] border border-[#222227] flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <span className="w-9 h-9 rounded-xl bg-[#25D366]/15 text-[#25D366] flex items-center justify-center shrink-0">
+                <MessageCircle className="w-4 h-4 fill-[#25D366]" />
+              </span>
+              <div>
+                <div className="font-display font-bold text-sm text-[#F5F5F5]">
+                  Have a specific question about your business?
+                </div>
+                <div className="text-xs text-[#858585]">
+                  Get direct, straight answers without pushy sales tactics.
+                </div>
+              </div>
+            </div>
+
+            <a
+              href={createWhatsAppUrl("Hi Arman, I reviewed your FAQs on Performize and have a question regarding my business marketing strategy.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-display font-black text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5 shrink-0"
+            >
+              <span>Ask on WhatsApp</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </motion.div>
+
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
-          className="text-center"
+          className="text-center flex flex-wrap items-center justify-center gap-4"
         >
           <button
             onClick={onStartProject}
@@ -160,6 +307,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartProject }) => {
           >
             Start A Strategic Conversation
           </button>
+          <a
+            href={createWhatsAppUrl("Hi Arman, I would like to book a 1-on-1 strategy audit for my business with Performize.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-7 py-4 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-display font-black text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2"
+          >
+            <MessageCircle className="w-4 h-4 fill-[#0B0B0C]" />
+            <span>WhatsApp Quick Audit</span>
+          </a>
         </motion.div>
       </div>
     </div>

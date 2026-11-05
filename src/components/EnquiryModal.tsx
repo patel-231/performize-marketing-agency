@@ -82,7 +82,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
             </p>
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href={`https://wa.me/15550192834?text=Hi%20Performize%2C%20I%20just%20submitted%20a%20project%20brief%20for%20${encodeURIComponent(formData.companyName || 'our brand')}`}
+                href={`https://wa.me/919528074537?text=Hi%20Performize%2C%20I%20just%20submitted%20a%20project%20brief%20for%20${encodeURIComponent(formData.companyName || 'our brand')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-full bg-[#CCFF00] text-[#0B0B0C] font-bold text-xs uppercase tracking-wider flex items-center gap-2 hover:bg-[#B8E600] transition-colors"
@@ -191,7 +191,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                 </label>
                 <input
                   type="tel"
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+91 95280 74537"
                   value={formData.phone}
                   onChange={e => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-lg bg-[#0B0B0C] border border-[#26262B] focus:border-[#E60023] focus:outline-none text-sm text-[#F5F5F5] placeholder-[#4A4A52]"

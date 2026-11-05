@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Check, ChevronDown, ChevronUp, Layers, Sparkles } from 'lucide-react';
-import { AGENCY_SERVICES } from '../data/agencyData';
+import { ArrowUpRight, Check, ChevronDown, ChevronUp, Layers, Sparkles, MessageCircle } from 'lucide-react';
+import { AGENCY_SERVICES, getServiceWhatsAppUrl } from '../data/agencyData';
 import { ServiceItem } from '../types';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -151,13 +151,25 @@ export const ServicesOverviewSection: React.FC<ServicesOverviewSectionProps> = (
                             </div>
                           </div>
 
-                          <button
-                            onClick={() => onEnquireService(service.title)}
-                            className="w-full py-3.5 px-4 rounded-xl bg-[#E60023] hover:bg-[#FF1E38] text-white font-display font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(230,0,35,0.4)] cursor-pointer active:scale-95"
-                          >
-                            <span>Enquire For {service.title}</span>
-                            <ArrowUpRight className="w-4 h-4" />
-                          </button>
+                          <div className="space-y-2.5">
+                            <a
+                              href={getServiceWhatsAppUrl(service.title, service.whatsappMessage)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-display font-black text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(37,211,102,0.3)] active:scale-95"
+                            >
+                              <MessageCircle className="w-4 h-4 fill-[#0B0B0C]" />
+                              <span>Discuss on WhatsApp</span>
+                              <ArrowUpRight className="w-4 h-4" />
+                            </a>
+
+                            <button
+                              onClick={() => onEnquireService(service.title)}
+                              className="w-full py-2.5 px-4 rounded-xl bg-[#1A1A1E] hover:bg-[#E60023] text-[#F5F5F5] hover:text-white font-display font-semibold text-[11px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 border border-[#26262B] hover:border-transparent cursor-pointer active:scale-95"
+                            >
+                              <span>Custom Scope Proposal</span>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </motion.div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { CheckCircle2, ChevronRight, ShieldCheck, TrendingDown, TrendingUp } from 'lucide-react';
+import { CheckCircle2, ChevronRight, ShieldCheck, TrendingDown, TrendingUp, Image as ImageIcon, Maximize2, X, Filter } from 'lucide-react';
+import { VERIFIED_CAMPAIGN_PROOFS, ProofItem } from '../data/proofsData';
 
 interface MetricPoint {
   date: string;
@@ -9,8 +10,10 @@ interface MetricPoint {
 }
 
 export const MetaInsightsSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'conversations' | 'roas' | 'cpl' | 'campaigns'>('conversations');
+  const [activeTab, setActiveTab] = useState<'conversations' | 'roas' | 'cpl' | 'campaigns' | 'proofs'>('conversations');
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [selectedProof, setSelectedProof] = useState<ProofItem | null>(null);
+  const [proofFilter, setProofFilter] = useState<'all' | 'ecommerce' | 'leads' | 'app' | 'google-ads' | 'overview'>('all');
 
   // IntersectionObserver state to trigger animations when scrolled into view
   const sectionRef = useRef<HTMLElement>(null);
@@ -347,6 +350,17 @@ export const MetaInsightsSection: React.FC = () => {
               }`}
             >
               4. Verified Campaign Ledger
+            </button>
+            <button
+              onClick={() => setActiveTab('proofs')}
+              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
+                activeTab === 'proofs'
+                  ? 'bg-[#E60023] text-white shadow-[0_0_15px_rgba(230,0,35,0.4)]'
+                  : 'text-[#CCFF00] hover:text-[#F5F5F5] hover:bg-[#1A1A1E]'
+              }`}
+            >
+              <ImageIcon className="w-3.5 h-3.5" />
+              <span>5. Live Proof Screenshots ({VERIFIED_CAMPAIGN_PROOFS.length})</span>
             </button>
           </div>
 
@@ -696,6 +710,162 @@ export const MetaInsightsSection: React.FC = () => {
                 ))}
               </tbody>
             </table>
+          </div>
+        )}
+
+        {/* TAB 5: Live Real Campaign Proof Screenshots from Replit */}
+        {activeTab === 'proofs' && (
+          <div className="p-6 sm:p-8 rounded-2xl bg-[#121214] border border-[#222227] shadow-2xl animate-fadeIn">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 border-b border-[#1F1F24] pb-6">
+              <div>
+                <span className="text-xs uppercase tracking-widest text-[#CCFF00] font-mono-numbers font-semibold">
+                  Uncut Live Proof Ledger
+                </span>
+                <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-[#F5F5F5] uppercase tracking-tight mt-1">
+                  Verified Meta &amp; Google Ads Dashboard Snapshots
+                </h3>
+                <p className="text-xs text-[#858585] mt-1 max-w-2xl">
+                  Actual live account snapshots showing verified client campaigns, cost-per-lead, adds-to-cart, purchase ROAS, and volume benchmarks. Click any screenshot to inspect full resolution.
+                </p>
+              </div>
+
+              {/* Sub-Category Filter */}
+              <div className="flex items-center gap-1.5 p-1 bg-[#0E0E10] border border-[#26262B] rounded-xl overflow-x-auto self-start sm:self-auto max-w-full">
+                {[
+                  { id: 'all', label: 'All Proofs' },
+                  { id: 'ecommerce', label: 'E-Commerce' },
+                  { id: 'leads', label: 'Leads & Messages' },
+                  { id: 'app', label: 'App Installs' },
+                  { id: 'google-ads', label: 'Google Ads' },
+                  { id: 'overview', label: 'Overviews' }
+                ].map((f) => (
+                  <button
+                    key={f.id}
+                    onClick={() => setProofFilter(f.id as any)}
+                    className={`px-3 py-1.5 text-[11px] font-bold rounded-lg transition-all cursor-pointer whitespace-nowrap ${
+                      proofFilter === f.id
+                        ? 'bg-[#E60023] text-white shadow-[0_0_10px_rgba(230,0,35,0.4)]'
+                        : 'text-[#858585] hover:text-[#F5F5F5] hover:bg-[#1A1A1E]'
+                    }`}
+                  >
+                    {f.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Proofs Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {VERIFIED_CAMPAIGN_PROOFS.filter(
+                (p) => proofFilter === 'all' || p.category === proofFilter
+              ).map((proof) => (
+                <div
+                  key={proof.id}
+                  onClick={() => setSelectedProof(proof)}
+                  className="group relative rounded-xl border border-[#222227] bg-[#0E0E10] overflow-hidden hover:border-[#CCFF00]/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.8)] transition-all duration-300 cursor-pointer flex flex-col"
+                >
+                  {/* Image container */}
+                  <div className="relative aspect-[16/10] bg-[#0B0B0C] overflow-hidden">
+                    <img
+                      src={proof.file}
+                      alt={proof.caption}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-transparent to-transparent opacity-80" />
+                    
+                    {/* Hover Zoom Icon */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 backdrop-blur-[2px]">
+                      <div className="px-3 py-1.5 rounded-lg bg-[#E60023] text-white text-xs font-bold font-mono-numbers flex items-center gap-1.5 shadow-[0_0_20px_rgba(230,0,35,0.8)]">
+                        <Maximize2 className="w-3.5 h-3.5" />
+                        <span>Inspect Data</span>
+                      </div>
+                    </div>
+
+                    {/* Category pill */}
+                    <div className="absolute top-3 left-3">
+                      <span className="px-2 py-0.5 rounded bg-[#0B0B0C]/85 backdrop-blur-md border border-white/10 text-[9px] font-mono-numbers uppercase text-[#CCFF00] font-bold">
+                        {proof.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Caption & Context */}
+                  <div className="p-4 flex-1 flex flex-col justify-between">
+                    <p className="text-xs text-[#F5F5F5] font-sans font-medium line-clamp-2 leading-relaxed">
+                      {proof.caption}
+                    </p>
+                    <div className="mt-3 pt-3 border-t border-[#1F1F24] flex items-center justify-between text-[10px] font-mono-numbers text-[#858585]">
+                      <span>Ads Manager Certified</span>
+                      <span className="text-[#CCFF00] group-hover:translate-x-0.5 transition-transform">
+                        View Detail &rarr;
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Modal for Full-Resolution Proof Inspection */}
+        {selectedProof && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fadeIn"
+            onClick={() => setSelectedProof(null)}
+          >
+            <div
+              className="relative max-w-4xl w-full bg-[#121214] border border-[#2E2E35] rounded-2xl overflow-hidden shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="flex items-center justify-between p-4 sm:p-5 border-b border-[#1F1F24] bg-[#0E0E10]">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-[#CCFF00]" />
+                  <span className="text-xs uppercase font-mono-numbers text-[#CCFF00] font-bold">
+                    Verified Ads Manager Proof · {selectedProof.category.toUpperCase()}
+                  </span>
+                </div>
+                <button
+                  onClick={() => setSelectedProof(null)}
+                  className="p-1.5 rounded-lg bg-[#1A1A1E] text-[#858585] hover:text-white transition-colors cursor-pointer"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Full Image Container */}
+              <div className="p-3 sm:p-4 bg-[#0B0B0C] max-h-[70vh] overflow-auto flex items-center justify-center">
+                <img
+                  src={selectedProof.file}
+                  alt={selectedProof.caption}
+                  className="max-h-[65vh] w-auto object-contain rounded-lg border border-[#1F1F24]"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+
+              {/* Modal Footer with Caption and WhatsApp Call-To-Action */}
+              <div className="p-5 sm:p-6 bg-[#121214] border-t border-[#1F1F24] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <h4 className="text-sm sm:text-base font-bold text-[#F5F5F5] font-sans">
+                    {selectedProof.caption}
+                  </h4>
+                  <span className="text-xs text-[#858585] font-mono-numbers block mt-1">
+                    Authentic client result managed and scaled by Performize Marketing Agency
+                  </span>
+                </div>
+                <a
+                  href={`https://wa.me/919528074537?text=${encodeURIComponent(`Hi Arman, I saw the proof: "${selectedProof.caption}". Can Performize replicate these metrics for my business?`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2 whitespace-nowrap self-start sm:self-auto cursor-pointer shadow-[0_0_15px_rgba(37,211,102,0.3)]"
+                >
+                  <span>Replicate These Results</span>
+                  <ChevronRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
           </div>
         )}
       </div>

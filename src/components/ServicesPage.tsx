@@ -1,6 +1,6 @@
 import React from 'react';
-import { AGENCY_SERVICES } from '../data/agencyData';
-import { ArrowUpRight, Check, Sparkles, Zap } from 'lucide-react';
+import { AGENCY_SERVICES, getServiceWhatsAppUrl } from '../data/agencyData';
+import { ArrowUpRight, Check, Sparkles, Zap, MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface ServicesPageProps {
@@ -73,14 +73,27 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onEnquireForService 
                 </div>
               </div>
 
-              {/* Action Button */}
-              <button
-                onClick={() => onEnquireForService(s.title)}
-                className="w-full py-3.5 rounded-xl bg-[#1A1A1E] group-hover:bg-[#E60023] text-[#F5F5F5] group-hover:text-white font-display font-semibold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-sm active:scale-95"
-              >
-                <span>Enquire For {s.title}</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </button>
+              {/* Action Buttons */}
+              <div className="space-y-2.5 pt-2">
+                <a
+                  href={getServiceWhatsAppUrl(s.title, s.whatsappMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-display font-black text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(37,211,102,0.3)] active:scale-95"
+                >
+                  <MessageCircle className="w-4 h-4 fill-[#0B0B0C]" />
+                  <span>Discuss on WhatsApp</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+
+                <button
+                  onClick={() => onEnquireForService(s.title)}
+                  className="w-full py-2.5 rounded-xl bg-[#1A1A1E] group-hover:bg-[#E60023] text-[#F5F5F5] group-hover:text-white font-display font-semibold text-[11px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-sm active:scale-95"
+                >
+                  <span>Enquire For {s.title}</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
             </motion.div>
           ))}
         </div>

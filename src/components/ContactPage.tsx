@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, Check, Clock, Mail, MapPin, MessageCircle, Phone, Send, ShieldCheck } from 'lucide-react';
-import { AGENCY_SERVICES } from '../data/agencyData';
+import { AGENCY_SERVICES, FOUNDER_PROFILE } from '../data/agencyData';
 import { motion } from 'motion/react';
 
 export const ContactPage: React.FC = () => {
@@ -83,7 +83,7 @@ export const ContactPage: React.FC = () => {
                 </p>
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a
-                    href={`https://wa.me/15550192834?text=Hi%20Performize%2C%20I%20just%20submitted%20a%20project%20form%20for%20${encodeURIComponent(formData.companyName || 'our team')}`}
+                    href={`https://wa.me/${FOUNDER_PROFILE.whatsappNumber}?text=Hi%20Performize%2C%20I%20just%20submitted%20a%20project%20form%20for%20${encodeURIComponent(formData.companyName || 'our team')}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-3 rounded-full bg-[#CCFF00] text-[#0B0B0C] font-bold text-xs uppercase tracking-wider flex items-center gap-2 hover:bg-[#B8E600] transition-colors"
@@ -187,7 +187,7 @@ export const ContactPage: React.FC = () => {
                     </label>
                     <input
                       type="tel"
-                      placeholder="+1 (555) 019-2834"
+                      placeholder="+91 95280 74537"
                       value={formData.phone}
                       onChange={e => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-[#0B0B0C] border border-[#26262B] focus:border-[#E60023] focus:outline-none text-sm text-[#F5F5F5] placeholder-[#4A4A52]"
@@ -264,15 +264,15 @@ export const ContactPage: React.FC = () => {
                 </div>
               </div>
               <p className="text-xs text-[#858585] leading-relaxed">
-                Need immediate answers? Start a direct chat with our client success team. Average reply time is under 15 minutes during business hours.
+                Need immediate answers? Start a direct chat with founder Arman Beg and our growth team. Average reply time is under 15 minutes during business hours.
               </p>
               <a
-                href="https://wa.me/15550192834?text=Hi%20Performize%2C%20I'd%20like%20to%20discuss%20a%20new%20marketing%20project."
+                href={FOUNDER_PROFILE.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CCFF00] text-[#0B0B0C] font-bold text-xs uppercase tracking-wider hover:bg-[#B8E600] transition-colors"
               >
-                <span>Open WhatsApp Chat</span>
+                <span>Open WhatsApp Chat (+91 95280 74537)</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -284,11 +284,13 @@ export const ContactPage: React.FC = () => {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono-numbers uppercase text-[#858585]">Direct Email</span>
-                  <a href="mailto:hello@performize.agency" className="font-display font-bold text-base text-[#F5F5F5] hover:text-[#FF1E38] block mt-0.5">
-                    hello@performize.agency
+                  <span className="text-xs font-mono-numbers uppercase text-[#858585]">Direct Inquiries</span>
+                  <a href={`mailto:${FOUNDER_PROFILE.email}`} className="font-display font-bold text-base text-[#F5F5F5] hover:text-[#FF1E38] block mt-0.5">
+                    {FOUNDER_PROFILE.email}
                   </a>
-                  <span className="text-[11px] text-[#858585]">Pitch decks &amp; RFPs welcome</span>
+                  <a href={`mailto:${FOUNDER_PROFILE.agencyEmail}`} className="text-xs text-[#858585] hover:text-[#CCFF00] block mt-0.5">
+                    {FOUNDER_PROFILE.agencyEmail}
+                  </a>
                 </div>
               </div>
 
@@ -297,12 +299,12 @@ export const ContactPage: React.FC = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono-numbers uppercase text-[#858585]">Primary Office</span>
+                  <span className="text-xs font-mono-numbers uppercase text-[#858585]">Service Reach</span>
                   <div className="font-display font-semibold text-sm text-[#F5F5F5] mt-0.5">
-                    440 Montgomery Street
+                    Delhi NCR, Mumbai &amp; All India
                   </div>
                   <div className="text-xs text-[#858585]">
-                    Financial District, San Francisco, CA 94104
+                    Available for Remote &amp; Global Client Scaling
                   </div>
                 </div>
               </div>
@@ -314,10 +316,10 @@ export const ContactPage: React.FC = () => {
                 <div>
                   <span className="text-xs font-mono-numbers uppercase text-[#858585]">SLA Guarantee</span>
                   <div className="text-xs text-[#F5F5F5] font-medium mt-0.5">
-                    Response time under 2 business hours
+                    Response time usually within 1 hour
                   </div>
                   <div className="text-[11px] text-[#858585]">
-                    Monday – Friday, 08:00 – 19:00 PST
+                    Monday – Saturday, 09:00 – 21:00 IST
                   </div>
                 </div>
               </div>

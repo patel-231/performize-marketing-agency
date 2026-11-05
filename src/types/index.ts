@@ -31,6 +31,7 @@ export interface ServiceItem {
   coreTech: string[];
   impactMetric: string;
   impactLabel: string;
+  whatsappMessage?: string;
 }
 
 export interface ProcessStep {
@@ -49,4 +50,25 @@ export interface ContactFormData {
   servicesNeeded: string[];
   budgetRange: string;
   projectOverview: string;
+}
+
+export interface TestimonialItem {
+  name: string;
+  location: string;
+  rating: number;
+  text: string;
+  initials: string;
+  color: string;
+}
+
+export interface ClientBrand {
+  name: string;
+  category?: string;
+  logo: string;
+  darkBg?: boolean;
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
 }

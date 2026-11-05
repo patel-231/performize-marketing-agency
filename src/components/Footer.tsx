@@ -28,7 +28,36 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEnquiry }) => 
               full-funnel performance media, and custom AI automation to make brands impossible to ignore.
             </p>
             <div className="text-xs text-[#858585]">
-              <span className="text-[#CCFF00] font-semibold">HQ:</span> 440 Montgomery St, Financial District, San Francisco &amp; Global Studio Network
+              <span className="text-[#CCFF00] font-semibold">Service Reach:</span> Delhi NCR, Mumbai &amp; Nationwide India · Global Remote Scaling Network
+            </div>
+            <div className="flex items-center gap-3 pt-2">
+              <a
+                href="https://www.instagram.com/armanbeg09"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-lg bg-[#121214] border border-[#222227] flex items-center justify-center text-[#858585] hover:text-[#CCFF00] hover:border-[#CCFF00]/40 transition-colors text-xs font-semibold"
+                aria-label="Instagram"
+              >
+                IG
+              </a>
+              <a
+                href="https://www.youtube.com/@armannbeg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-lg bg-[#121214] border border-[#222227] flex items-center justify-center text-[#858585] hover:text-[#FF1E38] hover:border-[#FF1E38]/40 transition-colors text-xs font-semibold"
+                aria-label="YouTube"
+              >
+                YT
+              </a>
+              <a
+                href="https://www.facebook.com/Armanbeg09"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-lg bg-[#121214] border border-[#222227] flex items-center justify-center text-[#858585] hover:text-[#0066FF] hover:border-[#0066FF]/40 transition-colors text-xs font-semibold"
+                aria-label="Facebook"
+              >
+                FB
+              </a>
             </div>
           </div>
 
@@ -82,7 +111,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEnquiry }) => 
               <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Google Ads Management</button></li>
               <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Website Development</button></li>
               <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">AI Automation &amp; Chatbots</button></li>
-              <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Video Editing &amp; Reels</button></li>
+              <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Ad Creative &amp; UGC</button></li>
               <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Lead Generation &amp; CRM</button></li>
             </ul>
           </div>
@@ -94,14 +123,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEnquiry }) => 
             </span>
             <ul className="space-y-2.5 text-xs">
               <li>
-                <a href="mailto:hello@performize.agency" className="hover:text-[#CCFF00] transition-colors flex items-center gap-1">
-                  <span>Email Agency</span>
+                <a href="mailto:mirzafaiz0852@gmail.com" className="hover:text-[#CCFF00] transition-colors flex items-center gap-1">
+                  <span>mirzafaiz0852@gmail.com</span>
                   <ArrowUpRight className="w-3 h-3" />
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/15550192834" target="_blank" rel="noopener noreferrer" className="hover:text-[#CCFF00] transition-colors flex items-center gap-1">
-                  <span>WhatsApp Direct</span>
+                <a href="https://wa.me/919528074537" target="_blank" rel="noopener noreferrer" className="hover:text-[#CCFF00] transition-colors flex items-center gap-1">
+                  <span>WhatsApp (+91 95280 74537)</span>
                   <ArrowUpRight className="w-3 h-3" />
                 </a>
               </li>

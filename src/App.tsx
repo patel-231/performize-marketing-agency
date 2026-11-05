@@ -10,6 +10,7 @@ import { PhilosophySection } from './components/PhilosophySection';
 import { ProcessSection } from './components/ProcessSection';
 import { WhyPerformizeSection } from './components/WhyPerformizeSection';
 import { MetaInsightsSection } from './components/MetaInsightsSection';
+import { ROICalculatorSection } from './components/ROICalculatorSection';
 import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 import { WorkPage } from './components/WorkPage';
@@ -88,6 +89,7 @@ export default function App() {
             />
             <PhilosophySection onStartProject={() => handleOpenEnquiry()} />
             <ProcessSection />
+            <ROICalculatorSection />
             <WhyPerformizeSection />
             <CTASection onStartProject={() => handleOpenEnquiry()} />
           </>
@@ -101,14 +103,18 @@ export default function App() {
         )}
 
         {currentPage === 'services' && (
-          <ServicesPage
-            onEnquireForService={(title) => handleOpenEnquiry(title)}
-          />
+          <>
+            <ServicesPage
+              onEnquireForService={(title) => handleOpenEnquiry(title)}
+            />
+            <ROICalculatorSection />
+          </>
         )}
 
         {currentPage === 'insights' && (
           <div className="pt-28 bg-[#0B0B0C] min-h-screen">
             <MetaInsightsSection />
+            <ROICalculatorSection />
             <CTASection onStartProject={() => handleOpenEnquiry()} />
           </div>
         )}

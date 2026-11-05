@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowUpRight, Play, Sparkles, TrendingUp, Zap } from 'lucide-react';
+import { ArrowUpRight, Play, Sparkles, TrendingUp, Zap, MessageCircle } from 'lucide-react';
 import gsap from 'gsap';
-import { AGENCY_METRICS } from '../data/agencyData';
+import { AGENCY_METRICS, createWhatsAppUrl } from '../data/agencyData';
 
 interface HeroSectionProps {
   onStartProject: () => void;
@@ -115,7 +115,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-wrap items-center gap-3.5 pt-2">
                 <button
                   onClick={onStartProject}
                   data-cursor="explore"
@@ -125,12 +125,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </button>
 
+                <a
+                  href={createWhatsAppUrl("Hi Arman, I would like to book a Free Business & Ad Account Audit for my brand with Performize.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-4 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-display font-black text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-[0_0_20px_rgba(37,211,102,0.3)] active:scale-95"
+                >
+                  <MessageCircle className="w-4 h-4 fill-[#0B0B0C]" />
+                  <span>WhatsApp: Free Audit</span>
+                </a>
+
                 <button
                   onClick={onExploreWork}
                   data-cursor="project"
-                  className="px-7 py-4 rounded-full bg-[#121214] hover:bg-[#1A1A1E] text-[#F5F5F5] border border-[#26262B] hover:border-[#CCFF00]/50 font-display font-semibold text-sm tracking-wider uppercase transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95"
+                  className="px-6 py-4 rounded-full bg-[#121214] hover:bg-[#1A1A1E] text-[#F5F5F5] border border-[#26262B] hover:border-[#CCFF00]/50 font-display font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95"
                 >
-                  <span>Explore Our Work</span>
+                  <span>Explore Work</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-[#CCFF00]" />
                 </button>
               </div>
@@ -152,8 +162,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Aspect Ratio 16:9 Image with Dark Vignette Scrim */}
               <div className="relative aspect-[16/10] sm:aspect-[16/11] overflow-hidden">
                 <img
-                  src="/src/assets/images/hero_creative_agency_1793425948429.jpg"
-                  alt="Performize Creative Agency Architectural Space"
+                  src="/src/assets/images/hero_marketing_monolith_1793790555026.jpg"
+                  alt="Performize Digital Marketing Agency — Skyscraper Monoliths and Live Ad Telemetry"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />

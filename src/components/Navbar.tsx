@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PageView } from '../types';
 import { BrandLogo } from './BrandLogo';
-import { ArrowUpRight, Menu, X, MessageSquare } from 'lucide-react';
+import { ArrowUpRight, Menu, X, MessageSquare, MessageCircle } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: PageView;
@@ -84,8 +84,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </nav>
 
-          {/* Zone 3: 1 Primary Action */}
-          <div className="hidden md:flex items-center gap-4 shrink-0">
+          {/* Zone 3: 1 Primary Action + Fast WhatsApp */}
+          <div className="hidden md:flex items-center gap-3 shrink-0">
+            <a
+              href="https://wa.me/919528074537?text=Hi%20Arman%2C%20reaching%20out%20from%20Performize.%20I%20would%20like%20to%20discuss%20a%20growth%20strategy%20for%20my%20business."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-[#25D366]/15 hover:bg-[#25D366] text-[#25D366] hover:text-[#0B0B0C] border border-[#25D366]/40 transition-all duration-300 flex items-center justify-center cursor-pointer shadow-sm active:scale-95"
+              title="Chat with Arman on WhatsApp (+91 95280 74537)"
+              aria-label="Chat on WhatsApp"
+            >
+              <MessageCircle className="w-4 h-4 fill-current" />
+            </a>
+
             <button
               onClick={onOpenEnquiry}
               className="relative group overflow-hidden px-5 py-2.5 rounded-full bg-[#E60023] hover:bg-[#FF1E38] text-white text-xs font-bold tracking-wider uppercase transition-all duration-300 shadow-[0_0_24px_rgba(230,0,35,0.4)] hover:shadow-[0_0_32px_rgba(255,30,56,0.6)] flex items-center gap-2 cursor-pointer active:scale-95 whitespace-nowrap shrink-0"
@@ -132,6 +143,16 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           <div className="flex flex-col gap-4 pt-6 border-t border-[#1A1A1E]">
+            <a
+              href="https://wa.me/919528074537?text=Hi%20Arman%2C%20reaching%20out%20from%20Performize.%20I%20would%20like%20to%20discuss%20a%20growth%20strategy%20for%20my%20business."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3.5 rounded-xl bg-[#25D366] text-[#0B0B0C] font-display font-black uppercase tracking-wider text-xs flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(37,211,102,0.3)]"
+            >
+              <MessageCircle className="w-4 h-4 fill-[#0B0B0C]" />
+              <span>Chat on WhatsApp (+91 95280 74537)</span>
+            </a>
+
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
