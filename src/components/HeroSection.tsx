@@ -125,13 +125,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </span>
             </h1>
 
-            {/* Key Agency Track Record Line from Reference: "5+ years | 511+ Brands | 60+ Crore Ad spent" */}
+            {/* Key Agency Track Record Line: "30+ Brands | ₹10 Cr+ Ad Spend | 30+ Campaigns Run & Managed" */}
             <div className="py-2.5 px-4 rounded-xl bg-[#121214] border border-[#222227] inline-flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm font-mono-numbers text-[#F5F5F5] font-semibold w-fit mb-5 shadow-inner">
-              <span className="text-[#CCFF00]">5+ Years</span>
+              <span className="text-[#CCFF00]">30+ Brands</span>
               <span className="text-[#333338]">|</span>
-              <span className="text-[#F5F5F5]">511+ Brands Scaled</span>
+              <span className="text-[#F5F5F5]">₹10 Cr+ Ad Spend</span>
               <span className="text-[#333338]">|</span>
-              <span className="text-[#FF1E38]">₹60+ Crore Ad Spent</span>
+              <span className="text-[#FF1E38]">30+ Campaigns Run &amp; Managed</span>
             </div>
 
             {/* Sub-headline from Reference */}

@@ -201,7 +201,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartProject }) => {
             </p>
 
             <p className="text-xs text-[#858585] leading-relaxed">
-              Serving ambitious brands across India and internationally — managing ₹1.2Cr+ in ad spend, launching 500+ campaigns, and engineering automated lead-to-booking pipelines that eliminate operational friction.
+              Serving ambitious brands across India and internationally — managing ₹10 Cr+ in ad spend, running &amp; managing 30+ campaigns across 30+ brands, and engineering automated lead-to-booking pipelines that eliminate operational friction.
             </p>
 
             <div className="pt-1 flex flex-wrap gap-2">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { WHY_PERFORMIZE, REAL_CLIENT_BRANDS, CLIENT_TESTIMONIALS, createWhatsAppUrl } from '../data/agencyData';
+import { REAL_CLIENT_BRANDS, CLIENT_TESTIMONIALS, createWhatsAppUrl } from '../data/agencyData';
 import { Check, Star, X, Zap, MessageCircle, ArrowUpRight, LayoutGrid, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ClientBrand } from '../types';
@@ -55,37 +55,6 @@ export const WhyPerformizeSection: React.FC = () => {
             Engineered from day one to replace slow, bloated legacy agency retainers with measurable outcomes.
           </p>
         </motion.div>
-
-        {/* 4 Differentiators Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {WHY_PERFORMIZE.map((item, idx) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="p-8 rounded-2xl bg-[#121214] border border-[#222227] hover:border-[#E60023]/60 transition-all duration-300 relative group"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="w-8 h-8 rounded-lg bg-[#1A1A1E] text-[#CCFF00] flex items-center justify-center font-mono-numbers text-xs font-bold border border-[#26262B]">
-                  0{idx + 1}
-                </span>
-                <span className="text-[11px] font-mono-numbers uppercase text-[#858585] tracking-widest">
-                  Standard Operating Protocol
-                </span>
-              </div>
-
-              <h3 className="font-display font-bold text-xl sm:text-2xl text-[#F5F5F5] group-hover:text-[#FF1E38] transition-colors mb-3">
-                {item.title}
-              </h3>
-
-              <p className="text-[#858585] text-sm sm:text-base leading-relaxed">
-                {item.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
 
         {/* Head-to-Head Comparison Table */}
         <motion.div
@@ -163,13 +132,13 @@ export const WhyPerformizeSection: React.FC = () => {
                 Proven Track Record · Real Brand Logos
               </span>
               <h3 className="font-display font-bold text-2xl sm:text-3xl text-[#F5F5F5]">
-                23+ Real Brands Scaled With Performize
+                30+ Real Brands Scaled With Performize
               </h3>
             </div>
             
             <div className="flex items-center gap-3">
               <span className="text-xs font-mono-numbers text-[#858585] hidden md:block">
-                ₹1.2Cr+ Managed Spend · 4.5x Avg ROAS
+                ₹10 Cr+ Managed Spend · 30+ Campaigns Managed
               </span>
 
               {/* View Switcher: Marquee vs Grid */}

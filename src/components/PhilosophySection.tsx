@@ -70,62 +70,50 @@ export const PhilosophySection: React.FC<PhilosophySectionProps> = ({ onStartPro
           </motion.div>
         </div>
 
-        {/* 3 Core Philosophical Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-[#1F1F24]">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="space-y-4"
-          >
-            <div className="w-10 h-10 rounded-xl bg-[#1A1A1E] border border-[#26262B] flex items-center justify-center text-[#E60023]">
-              <Target className="w-5 h-5" />
+        {/* Verified Track Record Affirmation */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-16 pt-12 border-t border-[#1F1F24] grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          <div className="p-6 rounded-2xl bg-[#121214] border border-[#222227] hover:border-[#CCFF00]/40 transition-colors">
+            <span className="text-xs uppercase font-mono-numbers text-[#CCFF00] tracking-wider block mb-2 font-semibold">
+              Verified Scale
+            </span>
+            <div className="font-display font-extrabold text-3xl sm:text-4xl text-[#F5F5F5] font-mono-numbers">
+              30+ Brands
             </div>
-            <h3 className="font-display font-bold text-xl text-[#F5F5F5]">
-              Conversion Is In The Craft
-            </h3>
-            <p className="text-sm text-[#858585] leading-relaxed">
-              True conversion rate optimization isn’t changing a button color from blue to green. It’s crafting an unshakeable narrative hook that resolves customer skepticism in 3 seconds.
+            <p className="text-xs text-[#858585] mt-2 leading-relaxed">
+              Partnered and scaled across e-commerce, D2C, education, and high-ticket service verticals.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-4"
-          >
-            <div className="w-10 h-10 rounded-xl bg-[#1A1A1E] border border-[#26262B] flex items-center justify-center text-[#CCFF00]">
-              <Flame className="w-5 h-5" />
+          <div className="p-6 rounded-2xl bg-[#121214] border border-[#222227] hover:border-[#E60023]/40 transition-colors">
+            <span className="text-xs uppercase font-mono-numbers text-[#FF1E38] tracking-wider block mb-2 font-semibold">
+              Capital Deployed
+            </span>
+            <div className="font-display font-extrabold text-3xl sm:text-4xl text-[#F5F5F5] font-mono-numbers">
+              ₹10 Cr+
             </div>
-            <h3 className="font-display font-bold text-xl text-[#F5F5F5]">
-              Velocity Kills Competition
-            </h3>
-            <p className="text-sm text-[#858585] leading-relaxed">
-              Markets reward the rapid. Our streamlined studio model lets us iterate on creatives, launch funnels, and test live angles weeks before slow traditional agencies even finish their kickoff slide deck.
+            <p className="text-xs text-[#858585] mt-2 leading-relaxed">
+              Ad spend managed across Meta Ads &amp; Google Ads with verified conversion tracking.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="space-y-4"
-          >
-            <div className="w-10 h-10 rounded-xl bg-[#1A1A1E] border border-[#26262B] flex items-center justify-center text-[#FF1E38]">
-              <Shield className="w-5 h-5" />
+          <div className="p-6 rounded-2xl bg-[#121214] border border-[#222227] hover:border-[#CCFF00]/40 transition-colors">
+            <span className="text-xs uppercase font-mono-numbers text-[#CCFF00] tracking-wider block mb-2 font-semibold">
+              Execution Track Record
+            </span>
+            <div className="font-display font-extrabold text-3xl sm:text-4xl text-[#F5F5F5] font-mono-numbers">
+              30+ Campaigns
             </div>
-            <h3 className="font-display font-bold text-xl text-[#F5F5F5]">
-              Data Without Ego
-            </h3>
-            <p className="text-sm text-[#858585] leading-relaxed">
-              We test relentlessly and let real consumer behavior dictate winning assets. We don’t fall in love with concepts that don’t generate cash flow.
+            <p className="text-xs text-[#858585] mt-2 leading-relaxed">
+              High-converting funnels run &amp; managed with 24/7 automated lead routing and CAPI tracking.
             </p>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

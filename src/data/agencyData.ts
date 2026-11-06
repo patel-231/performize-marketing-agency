@@ -331,10 +331,10 @@ export const AGENCY_PROCESS: ProcessStep[] = [
 ];
 
 export const AGENCY_METRICS = [
-  { value: '₹1.2Cr+', label: 'Meta Ads Spend Managed' },
-  { value: '4.5x', label: 'Average ROAS Delivered' },
-  { value: '500+', label: 'Campaigns Run & Managed' },
-  { value: '30+', label: 'Active Brands Scaled' }
+  { value: '30+', label: 'Brands Scaled' },
+  { value: '₹10 Cr+', label: 'Ad Spend Managed' },
+  { value: '30+', label: 'Campaigns Run & Managed' },
+  { value: '4.55x', label: 'Average ROAS Delivered' }
 ];
 
 export const WHY_PERFORMIZE = [

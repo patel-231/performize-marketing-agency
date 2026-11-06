@@ -203,7 +203,7 @@ export const ROICalculatorSection: React.FC = () => {
 
             <div className="pt-2 text-xs text-[#858585] flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-[#CCFF00] shrink-0" />
-              <span>Calibrated against 500+ live campaigns and ₹1.2Cr+ managed Meta ad spend.</span>
+              <span>Calibrated against 30+ live campaigns and ₹10 Cr+ managed ad spend across 30+ brands.</span>
             </div>
           </div>
 
