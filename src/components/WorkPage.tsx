@@ -6,9 +6,14 @@ import { ArrowUpRight, Layers } from 'lucide-react';
 interface WorkPageProps {
   onSelectProject: (project: Project) => void;
   onOpenEnquiry: () => void;
+  onNavigateToCaseStudies?: () => void;
 }
 
-export const WorkPage: React.FC<WorkPageProps> = ({ onSelectProject, onOpenEnquiry }) => {
+export const WorkPage: React.FC<WorkPageProps> = ({
+  onSelectProject,
+  onOpenEnquiry,
+  onNavigateToCaseStudies
+}) => {
   const [activeCategory, setActiveCategory] = useState<'all' | 'd2c' | 'ecommerce' | 'lead-generation'>('all');
 
   const filterTabs: { id: 'all' | 'd2c' | 'ecommerce' | 'lead-generation'; label: string }[] = [
@@ -47,21 +52,33 @@ export const WorkPage: React.FC<WorkPageProps> = ({ onSelectProject, onOpenEnqui
             algorithmic customer acquisition, and 24/7 automation systems built for compounding enterprise value.
           </p>
 
-          {/* Category Filter Bar */}
-          <div className="flex flex-wrap items-center gap-2 mt-10">
-            {filterTabs.map(tab => (
+          {/* Category Filter Bar and Case Studies link */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-10">
+            <div className="flex flex-wrap items-center gap-2">
+              {filterTabs.map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveCategory(tab.id)}
+                  className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all cursor-pointer ${
+                    activeCategory === tab.id
+                      ? 'bg-[#E60023] text-white shadow-[0_0_20px_rgba(230,0,35,0.4)]'
+                      : 'bg-[#121214] text-[#858585] border border-[#222227] hover:text-[#F5F5F5] hover:border-[#33333A]'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {onNavigateToCaseStudies && (
               <button
-                key={tab.id}
-                onClick={() => setActiveCategory(tab.id)}
-                className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all cursor-pointer ${
-                  activeCategory === tab.id
-                    ? 'bg-[#E60023] text-white shadow-[0_0_20px_rgba(230,0,35,0.4)]'
-                    : 'bg-[#121214] text-[#858585] border border-[#222227] hover:text-[#F5F5F5] hover:border-[#33333A]'
-                }`}
+                onClick={onNavigateToCaseStudies}
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#1A1A1E] hover:bg-[#E60023] text-xs font-semibold tracking-wider uppercase text-[#F5F5F5] hover:text-white border border-[#26262B] transition-all cursor-pointer shadow-md self-start sm:self-auto active:scale-95"
               >
-                {tab.label}
+                <span>More Case Studies</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#CCFF00]" />
               </button>
-            ))}
+            )}
           </div>
         </div>
 

@@ -98,7 +98,7 @@ export const PhilosophySection: React.FC<PhilosophySectionProps> = ({ onStartPro
               ₹10 Cr+
             </div>
             <p className="text-xs text-[#858585] mt-2 leading-relaxed">
-              Ad spend managed across Meta Ads &amp; Google Ads with verified conversion tracking.
+              Ad spend managed across paid advertising campaigns with verified conversion tracking.
             </p>
           </div>
 

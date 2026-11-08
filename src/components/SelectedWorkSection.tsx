@@ -6,11 +6,13 @@ import { Project } from '../types';
 interface SelectedWorkSectionProps {
   onSelectProject: (project: Project) => void;
   onViewAllWork: () => void;
+  onOpenCaseStudies?: () => void;
 }
 
 export const SelectedWorkSection: React.FC<SelectedWorkSectionProps> = ({
   onSelectProject,
-  onViewAllWork
+  onViewAllWork,
+  onOpenCaseStudies
 }) => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'd2c' | 'ecommerce' | 'lead-generation'>('all');
 
@@ -161,13 +163,13 @@ export const SelectedWorkSection: React.FC<SelectedWorkSectionProps> = ({
           })}
         </div>
 
-        {/* View All Work Button */}
+        {/* View All Work / More Case Studies Button */}
         <div className="text-center pt-8">
           <button
-            onClick={onViewAllWork}
+            onClick={onOpenCaseStudies || onViewAllWork}
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#121214] hover:bg-[#1A1A1E] border border-[#26262B] hover:border-[#E60023] text-[#F5F5F5] font-display font-bold text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer shadow-lg active:scale-95"
           >
-            <span>Explore All Client Case Studies</span>
+            <span>More Case Studies</span>
             <ArrowUpRight className="w-4 h-4 text-[#CCFF00]" />
           </button>
         </div>

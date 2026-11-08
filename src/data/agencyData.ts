@@ -3,7 +3,7 @@ import { Project, ServiceItem, ProcessStep, TestimonialItem, ClientBrand, FaqIte
 export const FOUNDER_PROFILE = {
   name: 'Arman Beg',
   title: 'Founder & Marketing Expert',
-  specialty: 'Meta Ads Expert & AI Automation Specialist',
+  specialty: 'Performance Marketing & AI Automation Specialist',
   company: 'Performize Marketing Agency',
   bio: 'As the founder, I build performance-driven marketing systems and AI automation pipelines that generate real business results. Our focus is on measurable outcomes — leads, revenue, and ROAS — not vanity metrics.',
   phone: '+91 95280 74537',
@@ -22,9 +22,9 @@ export const FOUNDER_PROFILE = {
   },
   photo: '/assets/founder/founder_photo.png',
   credentials: [
-    'Meta Business Partner',
-    'Google Ads Expert',
-    'Google Analytics 4 Certified',
+    'Performance Marketing Certified',
+    'Conversion Optimization Expert',
+    'Analytics & Attribution Certified',
     'AI-Powered Systems Specialist',
     'Zapier & n8n Automation Partner',
     'WhatsApp CRM Architect'
@@ -33,42 +33,42 @@ export const FOUNDER_PROFILE = {
 
 export const AGENCY_SERVICES: ServiceItem[] = [
   {
-    id: 'meta-ads',
+    id: 'paid-social-ads',
     number: '01',
-    title: 'Meta Ads Management',
-    shortDescription: 'Reach the right people on Facebook and Instagram and turn them into real inquiries, leads, and sales — not just impressions.',
-    fullDescription: 'We build high-converting paid social funnels engineered for scale across Facebook and Instagram. Combining rapid dynamic creative testing, bespoke video and carousel assets, and strict post-click landing page alignment, we maximize ROAS and customer lifetime value.',
+    title: 'Paid Social Advertising',
+    shortDescription: 'Reach the right target audience and turn them into real inquiries, leads, and sales — not just impressions.',
+    fullDescription: 'We build high-converting paid social funnels engineered for scale. Combining rapid dynamic creative testing, bespoke video and carousel assets, and strict post-click landing page alignment, we maximize ROAS and customer lifetime value.',
     deliverables: [
       'Lead Generation Campaigns',
       'Product Sales & ROAS Scaling',
       'Retargeting & Remarketing Funnels',
       'High-Velocity Creative Testing',
-      'Pixel & Conversions API (CAPI) Setup',
+      'Server-Side Conversion API Setup',
       'Audience & Lookalike Architecture'
     ],
-    coreTech: ['Meta Advantage+', 'Custom Audiences', 'Conversions API', 'Triple Whale'],
+    coreTech: ['Algorithmic Bidding', 'Custom Audiences', 'Conversions API', 'Attribution Analytics'],
     impactMetric: '4.5x',
     impactLabel: 'Average ROAS Delivered',
-    whatsappMessage: "Hi Arman, I want to scale my business with Meta Ads (Facebook & Instagram). Let's discuss campaign strategy and ROAS targets for my brand."
+    whatsappMessage: "Hi Arman, I want to scale my business with Paid Social Advertising. Let's discuss campaign strategy and ROAS targets for my brand."
   },
   {
-    id: 'google-ads',
+    id: 'search-performance-ads',
     number: '02',
-    title: 'Google Ads Management',
-    shortDescription: 'Show up when people are actively searching for what you offer. Capture high-intent buyers at the right moment.',
-    fullDescription: 'Capture customers at the exact millisecond of purchase intent. We architect data-driven Search, Display, YouTube, and Performance Max campaigns with precision negative-keyword filtering, high-converting copy, and bid governance.',
+    title: 'Search & High-Intent Ads',
+    shortDescription: 'Show up when people are actively searching for what you offer. Capture high-intent buyers at the exact moment of demand.',
+    fullDescription: 'Capture customers at the exact millisecond of purchase intent. We architect data-driven Search, Video, and Performance campaigns with precision negative-keyword filtering, high-converting copy, and bid governance.',
     deliverables: [
       'High-Intent Search Campaigns',
-      'Performance Max (PMax) Asset Optimization',
-      'YouTube Video Ad Campaigns',
+      'Cross-Channel Asset Optimization',
+      'High-Engagement Video Campaigns',
       'Display & Remarketing Networks',
-      'Precision Conversion Tracking & GA4',
+      'Precision Conversion Tracking',
       'Negative Keyword Governance'
     ],
-    coreTech: ['Google Ads', 'GA4', 'Google Tag Manager', 'Search Console'],
+    coreTech: ['Search Networks', 'Precision Analytics', 'Tag Architecture', 'Search Console'],
     impactMetric: '1.07M+',
     impactLabel: 'Verified Clicks Delivered',
-    whatsappMessage: "Hi Arman, I want to scale with high-intent Google Ads (Search, PMax & YouTube). Can we review my keywords and customer acquisition strategy?"
+    whatsappMessage: "Hi Arman, I want to scale with high-intent Search & Video Ads. Can we review my keywords and customer acquisition strategy?"
   },
   {
     id: 'website-development',
@@ -151,19 +151,19 @@ export const AGENCY_SERVICES: ServiceItem[] = [
     number: '07',
     title: 'Analytics & Tracking',
     shortDescription: 'Stop guessing. Know exactly which campaigns bring results, where leads come from, and how to improve every rupee spent.',
-    fullDescription: 'Data without precision attribution leads to wasted ad budgets. We configure server-side Conversions API, Google Analytics 4, and custom revenue dashboards so you have 100% transparency on ROI.',
+    fullDescription: 'Data without precision attribution leads to wasted ad budgets. We configure server-side Conversions API, advanced analytics, and custom revenue dashboards so you have 100% transparency on ROI.',
     deliverables: [
-      'GA4 Full Setup & Audit Architecture',
-      'Meta Conversions API (CAPI) & Pixel Configuration',
+      'Advanced Analytics Full Setup & Audit Architecture',
+      'Server-Side Conversions API & Event Tracking Configuration',
       'Custom Multi-Touch Event Tracking',
       'Closed-Loop Conversion Reports',
       'Live Executive ROI Dashboards',
       'Monthly Data-Driven Optimization Insights'
     ],
-    coreTech: ['GA4', 'Google Tag Manager', 'Meta CAPI', 'Looker Studio'],
+    coreTech: ['Analytics 4', 'Tag Manager', 'Server CAPI', 'Looker Studio'],
     impactMetric: '100%',
     impactLabel: 'Attribution Tracking Accuracy',
-    whatsappMessage: "Hi Arman, I need precision tracking set up for GA4, Meta Conversions API (CAPI), and accurate multi-touch attribution."
+    whatsappMessage: "Hi Arman, I need precision tracking set up for Server-Side Conversions API, tag architecture, and accurate multi-touch attribution."
   },
   {
     id: 'ad-creative-ugc',
@@ -227,7 +227,7 @@ export const AGENCY_PROJECTS: Project[] = [
     fullDescription: 'Karpasa Online needed to lower customer acquisition costs and drive purchase intent. Performize deployed high-performing dynamic creatives and audience retargeting that delivered 2,896 website adds-to-cart at ₹0.96 per action, 1,132 landing page views at ₹1.34, reaching 113,407 target buyers on a lean ₹2,767 budget.',
     image: '/assets/images/d2c_ecommerce_case_study_1793790557234.jpg',
     aspectRatio: '4:3',
-    services: ['Meta Ads Management', 'Website Development', 'Conversion Optimisation'],
+    services: ['Paid Social Advertising', 'Website Development', 'Conversion Optimisation'],
     results: [
       { label: 'Website Adds To Cart', value: '2,896', context: 'Achieved at ₹0.96 per add to cart' },
       { label: 'Audience Reach', value: '113,407', context: 'Delivered on just ₹2,767 ad spend' },
@@ -244,10 +244,10 @@ export const AGENCY_PROJECTS: Project[] = [
     clientIndustry: "Men's Premium Fashion & Lifestyle",
     year: '2026',
     shortDescription: 'Over 1.0M reach and ₹1.09L spend delivering 674 purchases at 4.55x ROAS and link clicks down to ₹0.48 CPC.',
-    fullDescription: 'Scaled Gentlemens Attire across Meta Ads using dynamic video creative iterations and catalog retargeting. Delivered 1,003,853 unique audience reach across 23 campaigns on ₹1,09,548 ad spend, yielding 674 purchases with a 4.55x ROAS and link CPCs as low as ₹0.48.',
+    fullDescription: 'Scaled Gentlemens Attire using dynamic video creative iterations and catalog retargeting. Delivered 1,003,853 unique audience reach across 23 campaigns on ₹1,09,548 ad spend, yielding 674 purchases with a 4.55x ROAS and link CPCs as low as ₹0.48.',
     image: '/assets/images/fashion_d2c_case_study_1793790557429.jpg',
     aspectRatio: '16:9',
-    services: ['Meta Ads Management', 'Ad Creative & UGC', 'Conversion Optimisation'],
+    services: ['Paid Social Advertising', 'Ad Creative & UGC', 'Conversion Optimisation'],
     results: [
       { label: 'Total Audience Reach', value: '1.00M+', context: 'Delivered across 23 live campaigns' },
       { label: 'Ecom Purchases Generated', value: '674', context: 'Achieved 4.55x peak ROAS' },
@@ -267,7 +267,7 @@ export const AGENCY_PROJECTS: Project[] = [
     fullDescription: 'Deployed conversion-focused campaigns for Magic Kart (272 purchases, 177K reach at ₹53.23 avg CPA) and TEAOFY (369 purchases on ₹50,000 spend at ₹135.50 CPA), backed by cross-campaign reach scaling across avmarrts (625,005 reach across 25 campaigns).',
     image: '/assets/images/d2c_ecommerce_case_study_1793790557234.jpg',
     aspectRatio: '4:3',
-    services: ['Meta Ads Management', 'Google Ads Management', 'Analytics & Tracking'],
+    services: ['Paid Social Advertising', 'Search & High-Intent Ads', 'Analytics & Tracking'],
     results: [
       { label: 'Purchases Generated', value: '641', context: 'Across Magic Kart & TEAOFY campaigns' },
       { label: 'Average Magic Kart CPA', value: '₹53.23', context: 'With 177,000 unique buyers reached' },
@@ -287,7 +287,7 @@ export const AGENCY_PROJECTS: Project[] = [
     fullDescription: 'Built full-funnel lead generation architectures for Fly High Visas, White Sand Residency, and local hospitality clients. Achieved 500+ leads/month with CPLs starting at ₹2.85 for direct messaging inquiries up to ₹39.24 for overseas university consultations, routing all leads to sales in < 2 seconds.',
     image: '/assets/images/ai_automation_funnel_1793790557532.jpg',
     aspectRatio: '16:9',
-    services: ['Meta Ads Management', 'Lead Generation & CRM', 'AI Automation & Chatbots'],
+    services: ['Paid Social Advertising', 'Lead Generation & CRM', 'AI Automation & Chatbots'],
     results: [
       { label: 'Monthly Inbound Leads', value: '500+', context: 'High-intent qualified inquiries' },
       { label: 'Lowest Inbound Cost', value: '₹2.85', context: 'Per verified WhatsApp lead' },
@@ -403,7 +403,7 @@ export const CLIENT_TESTIMONIALS: TestimonialItem[] = [
     name: 'Rohit Sharma',
     location: 'Delhi',
     rating: 5,
-    text: 'Helped us generate consistent leads through Meta Ads. The campaigns were structured properly and results started improving within weeks. Highly recommended.',
+    text: 'Helped us generate consistent leads through paid ad campaigns. The campaigns were structured properly and results started improving within weeks. Highly recommended.',
     initials: 'RS',
     color: '#0066FF'
   },
@@ -419,7 +419,7 @@ export const CLIENT_TESTIMONIALS: TestimonialItem[] = [
     name: 'Saurabh Gupta',
     location: 'Lucknow',
     rating: 5,
-    text: 'Worked with the team for Meta Ads and automation. The system they built actually helped us manage leads better and save hours of manual follow-up every single day.',
+    text: 'Worked with the team for advertising campaigns and automation. The system they built actually helped us manage leads better and save hours of manual follow-up every single day.',
     initials: 'SG',
     color: '#6366f1'
   },
@@ -487,7 +487,7 @@ export const AGENCY_FAQS: FaqItem[] = [
   },
   {
     question: 'Do you run ads on all platforms?',
-    answer: 'We specialize in Meta Ads (Facebook/Instagram) and Google Ads (Search, Display, YouTube & PMax). Whichever platform drives the highest converting volume for your business, that is what we scale.'
+    answer: 'We specialize in high-converting paid social and search performance advertising channels. Whichever channel drives the highest converting volume and lowest acquisition cost for your business, that is what we scale.'
   },
   {
     question: 'What is the minimum budget needed for Performance Marketing?',

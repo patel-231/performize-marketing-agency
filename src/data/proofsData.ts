@@ -64,17 +64,17 @@ export const VERIFIED_CAMPAIGN_PROOFS: ProofItem[] = [
     category: 'ecommerce'
   },
   {
-    id: 'proof-meta-leads-cpl',
+    id: 'proof-campaign-leads-cpl',
     varName: 'zM',
     file: '/assets/proofs/proof_zM_30.jpeg',
-    caption: 'Campaign performance dashboard — Meta leads at ₹138.64 per lead',
+    caption: 'Campaign performance dashboard — qualified leads at ₹138.64 per lead',
     category: 'leads'
   },
   {
-    id: 'proof-meta-leads-purchases',
+    id: 'proof-campaign-leads-purchases',
     varName: 'VM',
     file: '/assets/proofs/proof_VM_31.jpeg',
-    caption: 'Leads generated from Meta Ads — 18 website purchases, 630K reach',
+    caption: 'Campaign performance report — 18 website purchases, 630K reach',
     category: 'leads'
   },
   {
@@ -120,11 +120,11 @@ export const VERIFIED_CAMPAIGN_PROOFS: ProofItem[] = [
     category: 'app'
   },
   {
-    id: 'proof-google-ads',
+    id: 'proof-search-ads',
     varName: 'RM',
     file: '/assets/proofs/proof_RM_24.jpeg',
-    caption: 'Google Ads account — 43.6K clicks, ₹807K total conversion value',
-    category: 'google-ads'
+    caption: 'Search and Performance ad account — 43.6K clicks, ₹807K total conversion value',
+    category: 'overview'
   },
   {
     id: 'proof-performance-summary',

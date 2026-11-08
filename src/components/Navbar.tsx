@@ -28,8 +28,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navItems: { label: string; page: PageView }[] = [
     { label: 'Home', page: 'home' },
     { label: 'Work', page: 'work' },
+    { label: 'Case Studies', page: 'case-studies' },
     { label: 'Services', page: 'services' },
-    { label: 'Meta Insights', page: 'insights' },
     { label: 'About', page: 'about' },
     { label: 'Contact', page: 'contact' }
   ];

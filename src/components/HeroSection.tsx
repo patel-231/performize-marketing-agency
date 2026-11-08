@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowUpRight, Play, TrendingUp, Zap, MessageCircle, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Play, TrendingUp, Zap, MessageCircle, Sparkles, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { AGENCY_METRICS, createWhatsAppUrl } from '../data/agencyData';
 import gsap from 'gsap';
 
@@ -84,7 +84,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <span>Creative Performance Marketing</span>
           </span>
           <span aria-hidden="true" className="text-[#333338]">·</span>
-          <span>Meta &amp; Google Ads Specialists</span>
+          <span>Paid Advertising Campaign Specialists</span>
           <span aria-hidden="true" className="text-[#333338]">·</span>
           <span>Next-Gen Brand Scale</span>
         </div>
@@ -174,43 +174,36 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Certified By Trust Bar from Reference */}
               <div ref={certRef} className="pt-4 border-t border-[#1F1F24]/80">
                 <span className="text-[11px] uppercase tracking-wider text-[#858585] font-mono-numbers block mb-3 font-medium">
-                  Our Performance Marketing Services are Certified by
+                  Our Performance Marketing Services are Certified &amp; Audited
                 </span>
                 
                 <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-                  {/* Meta Business Partner */}
-                  <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#121214] border border-[#222227] hover:border-[#0081FB]/50 transition-colors">
-                    <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#0081FB] fill-current shrink-0">
-                      <path d="M16.99 0H7.01C3.14 0 0 3.14 0 7.01v9.98C0 20.86 3.14 24 7.01 24h9.98c3.87 0 7.01-3.14 7.01-7.01V7.01C24 3.14 20.86 0 16.99 0zm-1.89 16.5c-1.39 0-2.47-.94-3.1-1.92-.63.98-1.71 1.92-3.1 1.92-2.12 0-3.65-1.76-3.65-4.5 0-2.74 1.53-4.5 3.65-4.5 1.45 0 2.54.98 3.1 1.92.56-.94 1.65-1.92 3.1-1.92 2.12 0 3.65 1.76 3.65 4.5 0 2.74-1.53 4.5-3.65 4.5zm0-7.2c-1.12 0-1.99 1.1-1.99 2.7 0 1.6.87 2.7 1.99 2.7 1.12 0 1.99-1.1 1.99-2.7 0-1.6-.87-2.7-1.99-2.7zm-6.2 0c-1.12 0-1.99 1.1-1.99 2.7 0 1.6.87 2.7 1.99 2.7 1.12 0 1.99-1.1 1.99-2.7 0-1.6-.87-2.7-1.99-2.7z" />
-                    </svg>
+                  {/* Performance Marketing Certified Badge */}
+                  <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#121214] border border-[#222227] hover:border-[#CCFF00]/50 transition-colors">
+                    <ShieldCheck className="w-5 h-5 text-[#CCFF00] shrink-0" />
                     <div className="flex flex-col leading-tight">
-                      <span className="font-display font-extrabold text-xs text-[#F5F5F5] tracking-tight">Meta</span>
-                      <span className="text-[9px] text-[#858585] uppercase tracking-wider font-mono-numbers">Business Partner</span>
+                      <span className="font-display font-extrabold text-xs text-[#F5F5F5] tracking-tight">Performance</span>
+                      <span className="text-[9px] text-[#858585] uppercase tracking-wider font-mono-numbers">Certified Specialist</span>
                     </div>
                   </div>
 
-                  {/* Shopify Partners */}
+                  {/* E-Commerce Commerce Certified */}
                   <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#121214] border border-[#222227] hover:border-[#95BF47]/50 transition-colors">
                     <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0" fill="none">
                       <path d="M19.9 8.2c-.1-.3-.3-.4-.5-.4-.1 0-1.5.1-1.5.1s-1.2-3.3-1.3-3.6c-.1-.3-.4-.4-.7-.4h-.3c-.3 0-1.9.1-3 .5-.8-.8-1.8-1.3-3-1.3-2.3 0-3.8 1.8-3.8 4.4 0 .9.2 1.8.6 2.6l-2.4.7c-.4.1-.6.5-.5.9l2.4 12.3c.1.4.4.7.8.7h8.8c.4 0 .8-.3.8-.7l4.3-15.3c0-.1 0-.3-.1-.5zm-4.3-.4l-1.3-.4c-.2-.1-.4 0-.4.2l-.7 2.3-1.7-.5c.8-1.5 2.1-2.4 3.7-2.8l.4 1.2zm-6-2.9c0-1.7 1-2.9 2.5-2.9.7 0 1.3.3 1.8.8-1.4.5-2.6 1.4-3.4 2.8-.6-.2-.9-.5-.9-.7zm.9 3.8c.2-.5.5-1 1-1.4l1.3.4-3.1 7.2-.6-3.1 1.4-3.1zm1.7 12.3l-2.1-10.8 1.4-.4 2.8 6.5c.2.4.6.6 1 .4.4-.2.6-.6.4-1l-2.7-6.2 1.4-.4.8 2.7c.1.3.4.5.7.5s.6-.1.7-.4l1-3.2 2.1.6-4.1 14.7h-7.6z" fill="#95BF47" />
                     </svg>
                     <div className="flex flex-col leading-tight">
-                      <span className="font-display font-extrabold text-xs text-[#95BF47] tracking-tight">shopify</span>
-                      <span className="text-[9px] text-[#858585] uppercase tracking-wider font-mono-numbers">partners</span>
+                      <span className="font-display font-extrabold text-xs text-[#95BF47] tracking-tight">E-Commerce</span>
+                      <span className="text-[9px] text-[#858585] uppercase tracking-wider font-mono-numbers">Scale Partner</span>
                     </div>
                   </div>
 
-                  {/* Google Partner */}
-                  <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#121214] border border-[#222227] hover:border-[#4285F4]/50 transition-colors">
-                    <div className="flex items-center gap-0.5 shrink-0">
-                      <span className="w-1.5 h-4 rounded-sm bg-[#4285F4]" />
-                      <span className="w-1.5 h-4 rounded-sm bg-[#EA4335]" />
-                      <span className="w-1.5 h-4 rounded-sm bg-[#FBBC05]" />
-                      <span className="w-1.5 h-4 rounded-sm bg-[#34A853]" />
-                    </div>
+                  {/* Conversion Architecture Certified */}
+                  <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#121214] border border-[#222227] hover:border-[#E60023]/50 transition-colors">
+                    <TrendingUp className="w-5 h-5 text-[#E60023] shrink-0" />
                     <div className="flex flex-col leading-tight">
-                      <span className="font-display font-extrabold text-xs text-[#F5F5F5] tracking-tight">Google</span>
-                      <span className="text-[9px] text-[#858585] uppercase tracking-wider font-mono-numbers">Partner</span>
+                      <span className="font-display font-extrabold text-xs text-[#F5F5F5] tracking-tight">Conversion</span>
+                      <span className="text-[9px] text-[#858585] uppercase tracking-wider font-mono-numbers">Architecture Certified</span>
                     </div>
                   </div>
                 </div>
@@ -278,7 +271,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   ₹2.85 / Lead · 4.99M+ Impr
                 </div>
                 <div className="text-[#858585] text-[11px] mt-0.5">
-                  Verified Meta Ads live account data
+                  Verified advertising campaign account data
                 </div>
               </div>
             </div>

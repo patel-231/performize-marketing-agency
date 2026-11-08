@@ -274,7 +274,7 @@ export const WhyPerformizeSection: React.FC = () => {
                 ))}
               </div>
               <span className="text-[#F5F5F5] font-bold">5.0 / 5.0</span>
-              <span>· Verified Google & Meta Clients</span>
+              <span>· Verified Performance Marketing Clients</span>
             </div>
           </div>
 

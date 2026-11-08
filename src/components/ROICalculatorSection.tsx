@@ -77,7 +77,7 @@ export const ROICalculatorSection: React.FC = () => {
             transition={{ delay: 0.15 }}
             className="text-base sm:text-lg text-[#858585] font-light leading-relaxed"
           >
-            Simulate how much revenue and net returns your business could generate with a battle-tested Meta Ads architecture and automated conversion funnel.
+            Simulate how much revenue and net returns your business could generate with a battle-tested advertising campaign architecture and automated conversion funnel.
           </motion.p>
         </div>
 

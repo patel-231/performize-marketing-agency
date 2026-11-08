@@ -1,6 +1,7 @@
 import React from 'react';
 import { Project } from '../types';
-import { X, ArrowUpRight, Check, Sparkles } from 'lucide-react';
+import { X, ArrowUpRight, Check, Sparkles, ExternalLink, MessageCircle } from 'lucide-react';
+import { createWhatsAppUrl } from '../data/agencyData';
 
 interface ProjectDetailModalProps {
   project: Project | null;
@@ -51,10 +52,23 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         {/* Content Body */}
         <div className="p-6 sm:p-10 space-y-8">
           <div>
-            <div className="text-xs uppercase tracking-widest text-[#858585] font-mono-numbers">
-              {project.clientIndustry}
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-xs uppercase tracking-widest text-[#858585] font-mono-numbers">
+                {project.clientIndustry}
+              </span>
+              {project.websiteUrl && (
+                <a
+                  href={project.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#1A1A1E] hover:bg-[#25252C] text-xs font-mono-numbers text-[#CCFF00] border border-[#26262B] transition-colors"
+                >
+                  <span>{project.websiteUrl.replace('https://', '').replace(/\/$/, '')}</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
             </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl uppercase tracking-tight text-[#F5F5F5] mt-1">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl uppercase tracking-tight text-[#F5F5F5] mt-2">
               {project.title}
             </h2>
             <p className="text-[#858585] text-base sm:text-lg leading-relaxed mt-4 font-light">
@@ -65,7 +79,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           {/* Quantified Business Results */}
           <div className="p-6 rounded-xl bg-[#0B0B0C] border border-[#222227]">
             <span className="text-xs uppercase tracking-widest text-[#CCFF00] font-mono-numbers font-semibold block mb-4">
-              Verified Campaign Performance
+              Verified Meta Campaign Performance
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {project.results.map((res) => (
@@ -124,9 +138,15 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
           {/* Bottom Action */}
           <div className="pt-6 border-t border-[#1F1F24] flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-xs text-[#858585]">
-              Interested in similar outcomes for your company?
-            </div>
+            <a
+              href={createWhatsAppUrl(`Hi Arman, I reviewed your Meta Ads case study for ${project.title}. I'd like to discuss scaling my brand with a similar approach.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-[#0B0B0C] font-display font-black text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(37,211,102,0.3)]"
+            >
+              <MessageCircle className="w-4 h-4 fill-[#0B0B0C]" />
+              <span>Discuss on WhatsApp</span>
+            </a>
             <button
               onClick={() => {
                 onClose();

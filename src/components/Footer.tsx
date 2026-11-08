@@ -83,9 +83,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEnquiry }) => 
                 </button>
               </li>
               <li>
-                <button onClick={() => handleLink('insights')} className="hover:text-[#CCFF00] transition-colors cursor-pointer flex items-center gap-1">
-                  <span>Meta Ads Insights</span>
-                  <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#E60023] text-white">Live</span>
+                <button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors cursor-pointer">
+                  All 9 Services
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleLink('case-studies')} className="hover:text-[#CCFF00] transition-colors cursor-pointer flex items-center gap-1">
+                  <span>Performance Reports</span>
+                  <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#E60023] text-white">Audited</span>
                 </button>
               </li>
               <li>
@@ -107,8 +112,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEnquiry }) => 
               Key Disciplines
             </span>
             <ul className="space-y-2 text-xs">
-              <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Meta Ads Management</button></li>
-              <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Google Ads Management</button></li>
+              <li><button onClick={() => handleLink('case-studies')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Campaign Performance Reports</button></li>
+              <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Paid Advertising Management</button></li>
               <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Website Development</button></li>
               <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">AI Automation &amp; Chatbots</button></li>
               <li><button onClick={() => handleLink('services')} className="hover:text-[#F5F5F5] transition-colors text-left cursor-pointer">Ad Creative &amp; UGC</button></li>

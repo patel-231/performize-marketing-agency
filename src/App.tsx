@@ -20,6 +20,7 @@ import { ContactPage } from './components/ContactPage';
 import { ProjectDetailModal } from './components/ProjectDetailModal';
 import { EnquiryModal } from './components/EnquiryModal';
 import { ShowreelModal } from './components/ShowreelModal';
+import { CaseStudiesPage } from './components/CaseStudiesPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageView>('home');
@@ -80,8 +81,9 @@ export default function App() {
             <SelectedWorkSection
               onSelectProject={(p) => setSelectedProject(p)}
               onViewAllWork={() => navigateTo('work')}
+              onOpenCaseStudies={() => navigateTo('case-studies')}
             />
-            {/* Audited Meta Ads Manager Performance & Animated Data Graph */}
+            {/* Audited Campaign Performance & Animated Data Graph */}
             <MetaInsightsSection />
             <ServicesOverviewSection
               onSelectService={handleSelectService}
@@ -99,6 +101,14 @@ export default function App() {
           <WorkPage
             onSelectProject={(p) => setSelectedProject(p)}
             onOpenEnquiry={() => handleOpenEnquiry()}
+            onNavigateToCaseStudies={() => navigateTo('case-studies')}
+          />
+        )}
+
+        {currentPage === 'case-studies' && (
+          <CaseStudiesPage
+            onBackToHome={() => navigateTo('home')}
+            onOpenEnquiry={(title) => handleOpenEnquiry(title)}
           />
         )}
 

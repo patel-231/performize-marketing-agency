@@ -120,7 +120,7 @@ export const MetaInsightsSection: React.FC = () => {
   // Cost per lead benchmarks from pages 1, 14, 19, 25, 26, 34
   const cplBenchmarks = [
     { category: 'BTS & Restaurant Engagement', cost: '₹2.85', baseline: '₹18.00', reduction: '84% Cheaper', metric: 'Per Conversation' },
-    { category: 'High-Intent Meta Leads (Form)', cost: '₹9.95', baseline: '₹65.00', reduction: '85% Cheaper', metric: 'Per Qualified Lead' },
+    { category: 'High-Intent Qualified Form Leads', cost: '₹9.95', baseline: '₹65.00', reduction: '85% Cheaper', metric: 'Per Qualified Lead' },
     { category: 'Direct WhatsApp Leads', cost: '₹12.25', baseline: '₹45.00', reduction: '73% Cheaper', metric: 'Per Direct Inbound' },
     { category: 'Real Estate & Delhi NCR Inbound', cost: '₹25.37', baseline: '₹95.00', reduction: '73% Cheaper', metric: 'Per Form Lead' },
     { category: 'Dental & Clinic Appointments', cost: '₹26.93', baseline: '₹80.00', reduction: '66% Cheaper', metric: 'Per Patient Lead' },
@@ -176,7 +176,7 @@ export const MetaInsightsSection: React.FC = () => {
     },
     {
       campaign: 'Delhi NCR & Pan-India Lead Gen Forms (Page 34)',
-      results: '368 Meta Leads',
+      results: '368 Form Leads',
       costPerResult: '₹25.37 – ₹63.94 / Lead',
       impressions: '190,400',
       reach: '135,063',
@@ -235,7 +235,7 @@ export const MetaInsightsSection: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-[#CCFF00] font-semibold mb-3">
               <ShieldCheck className="w-4 h-4 text-[#CCFF00]" />
-              <span>Verified Meta Ads Performance</span>
+              <span>Verified Campaign Performance</span>
               <span className="text-[#858585]">· Audited Account Data</span>
             </div>
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#F5F5F5] uppercase tracking-tight">
@@ -246,7 +246,7 @@ export const MetaInsightsSection: React.FC = () => {
             </h2>
           </div>
           <p className="text-xs text-[#858585] max-w-sm font-mono-numbers">
-            Extracted directly from live Meta Ads Manager campaigns. Numbers and graphs animate automatically as you scroll into view.
+            Extracted directly from live advertising account campaigns. Numbers and graphs animate automatically as you scroll into view.
           </p>
         </div>
 
@@ -376,7 +376,7 @@ export const MetaInsightsSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
               <div>
                 <span className="text-xs uppercase tracking-widest text-[#858585] font-mono-numbers">
-                  Meta Ads Manager · Performance Overview
+                  Campaign Analytics · Performance Overview
                 </span>
                 <h3 className="font-display font-bold text-xl sm:text-2xl text-[#F5F5F5] mt-1 flex items-center gap-3">
                   <span>Messaging Conversations Inbound Velocity</span>
@@ -544,7 +544,7 @@ export const MetaInsightsSection: React.FC = () => {
             <div className="mt-6 pt-6 border-t border-[#1F1F24] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
               <div className="flex items-center gap-2 text-[#858585]">
                 <CheckCircle2 className="w-4 h-4 text-[#CCFF00]" />
-                <span>Source: Meta Ads Manager Export (1,139 total messaging leads at ₹25.16 average)</span>
+                <span>Source: Live Campaign Export (1,139 total messaging leads at ₹25.16 average)</span>
               </div>
               <span className="text-[#CCFF00] font-mono-numbers">Account ID: Verified Active</span>
             </div>
@@ -664,7 +664,7 @@ export const MetaInsightsSection: React.FC = () => {
                 Full Ads Manager Transparency Log
               </span>
               <h3 className="font-display font-bold text-2xl text-[#F5F5F5] mt-1">
-                Audited Meta Campaign Ledger
+                Audited Campaign Performance Ledger
               </h3>
             </div>
 
@@ -722,7 +722,7 @@ export const MetaInsightsSection: React.FC = () => {
                   Uncut Live Proof Ledger
                 </span>
                 <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-[#F5F5F5] uppercase tracking-tight mt-1">
-                  Verified Meta &amp; Google Ads Dashboard Snapshots
+                  Verified Campaign Dashboard Snapshots
                 </h3>
                 <p className="text-xs text-[#858585] mt-1 max-w-2xl">
                   Actual live account snapshots showing verified client campaigns, cost-per-lead, adds-to-cart, purchase ROAS, and volume benchmarks. Click any screenshot to inspect full resolution.
@@ -736,7 +736,6 @@ export const MetaInsightsSection: React.FC = () => {
                   { id: 'ecommerce', label: 'E-Commerce' },
                   { id: 'leads', label: 'Leads & Messages' },
                   { id: 'app', label: 'App Installs' },
-                  { id: 'google-ads', label: 'Google Ads' },
                   { id: 'overview', label: 'Overviews' }
                 ].map((f) => (
                   <button
